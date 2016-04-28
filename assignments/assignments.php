@@ -8,7 +8,7 @@
       <div class="wrapper">
      <header>
          <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/main-header.php'; ?>
-         <h1>Exercises</h1>
+         <h1>Assignments</h1>
      </header>
           <main>   
       <p>
