@@ -10,28 +10,26 @@
          <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/main-header.php'; ?>
          <h1>Which Frozen Character Are You?</h1>
      </header>
-          <main>   
+     
       <p>
           Take this quiz to see which Frozen character you are most like.
       </p><br>
-      <?php if ($gender == NULL || $gender == false) {
-      echo
+      
           '<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="survey_form">
-          
-          <label>Enter your name:</label>
+        <?php if ($gender == NULL || $gender == false) {
+        echo  
+          '<label>Enter your name:</label>
           <input type="text" name="name"><br>
           
           <label>Select your gender:</label>
           <input type="radio" name="gender" value="female">Female
-      <input type="radio" name="gender" value="male">Male<br>
+          <input type="radio" name="gender" value="male">Male<br>
           
           <input type="submit" value="Next">
           </form>';}
           elseif ($gender == 'male'){
               echo 
-                  '<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="survey_form">
-                    
-                <label>What is your favorite food?</label>
+                '<label>What is your favorite food?</label>
                     <input type="radio" name="food" value="kristoff">Carrots<br>
                     <input type="radio" name="food" value="olaf">Snow Cones<br>
                     <input type="radio" name="food" value="hans">Sandwiches<br>
@@ -53,9 +51,8 @@
                     </form>';
           }
           elseif ($gender == 'female'){
-              echo'<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="survey_form">
-                    
-                <label>What is your favorite food?</label>
+              echo
+                '<label>What is your favorite food?</label>
                     <input type="radio" name="food" value="anna">Sandwiches<br>
                     <input type="radio" name="food" value="elsa">Popsicles<br>
                     <input type="radio" name="food" value="queen">Roast<br>
@@ -78,7 +75,7 @@
           }?>
 
       <a href='results.php'>Click here to go to the results</a>
-        </main>
+        
     <footer>
     <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/footer.php'; ?>
     </footer>
