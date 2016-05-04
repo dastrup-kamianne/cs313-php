@@ -8,16 +8,13 @@
       <div class="wrapper">
      <header>
          <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/main-header.php'; ?>
-         <h1>Assignments</h1>
+         <h1>Which Frozen Character Are You?</h1>
      </header>
           <main>   
       <p>
-          Look below to find links to my assignments for CS 313.
+          Take this quiz to see which Frozen character you are most like.
       </p><br>
-      <h2>Assignments</h2>
-      <ul class="exercise">
-          <li><a href='survey/survey.php'>PHP Survey</a></li>
-      </ul><br>
+      
         </main>
     <footer>
     <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/footer.php'; ?>
