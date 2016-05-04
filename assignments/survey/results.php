@@ -12,7 +12,9 @@
      </header>
           <main>   
       <p>
-          <?php echo 'You are most like' . $answer ?>.
+          <?php if ($answer != NULL || != false)
+              {echo $name . ', you are most like' . $answer ?>.}
+          }
       </p><br>
       <?php echo $anna?>% of users are like Anna.<br>
       <?php echo $elsa?>% of users are like Elsa.<br>
