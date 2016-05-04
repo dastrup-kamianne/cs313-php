@@ -14,7 +14,16 @@
       <p>
           Take this quiz to see which Frozen character you are most like.
       </p><br>
-      
+      <form action="results.php" method="post" id="survey_form">
+          
+          <label>Select your gender:</label>
+          <input type="radio" name="gender" value="female">Female
+          <input type="radio" name="gender" value="male">Male
+          
+          <input type='submit' value='Next'>
+        <br>
+      </form>
+      <a href='results.php'>Click here to go to the results</a>
         </main>
     <footer>
     <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/footer.php'; ?>
