@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
   if (empty($_POST["education"])) {
     $educationErr = "Education is required";
   } else {
-    $education = test_input($_POST["education"]);
+    $education = implode($_POST["education"]);
   }
 
 }
