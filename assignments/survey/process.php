@@ -121,28 +121,28 @@ switch ($action){
                 return $oaken;
         break;}
         if ($anna > $elsa && $anna > $queen && $anna > $bulda){
-            $answer = $anna;
+            $answer = 'Anna';
         }
         elseif ($elsa > $anna && $elsa > $queen && $elsa > $bulda){
-            $answer = $elsa;
+            $answer = 'Elsa';
         }
         elseif ($queen > $anna && $queen > $elsa && $queen > $bulda){
-            $answer = $queen;
+            $answer = 'Queen Iduna';
         }
         elseif ($bulda > $anna && $bulda > $queen && $bulda > $elsa){
-            $answer = $bulda;
+            $answer = 'Bulda';
         }
         elseif ($kristoff > $olaf && $kristoff > $hans && $kristoff > $oaken){
-            $answer = $kristoff;
+            $answer = 'Kristoff';
         }
         elseif ($olaf > $kristoff && $olaf > $hans && $olaf > $oaken){
-            $answer = $olaf;
+            $answer = 'Olaf';
         }
         elseif ($hans > $olaf && $hans > $kristoff && $hans > $oaken){
-            $answer = $hans;
+            $answer = 'Hans';
         }
         elseif ($oaken > $olaf && $oaken > $hans && $oaken > $kristoff){
-            $answer = $oaken;
+            $answer = 'Oaken';
         }
         include 'results.php';
 break;
