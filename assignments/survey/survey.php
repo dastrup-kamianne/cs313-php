@@ -16,7 +16,8 @@
       </p><br>
       <div id="survey_box">
       <?php if ($gender == NULL || $gender == false) { ?>
-          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="survey_form">
+          <form action="process.php" method="post" id="survey_form">
+              <input type="hidden" name="action" value="continue">
         
           
           <label>Enter your name:</label>
@@ -30,7 +31,8 @@
           </form>
           <?php ;}
           elseif ($gender == 'male'){ ?>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="survey_form">   
+            <form action="process.php" method="post" id="survey_form">
+              <input type="hidden" name="action" value="show_results">
                 <label>What is your favorite food?</label>
                     <input type="radio" name="food" value="kristoff">Carrots<br>
                     <input type="radio" name="food" value="olaf">Snow Cones<br>
@@ -53,7 +55,9 @@
                     </form> <?php ;
           }
           elseif ($gender == 'female'){ ?>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="survey_form">  
+            <form action="process.php" method="post" id="survey_form">
+              <input type="hidden" name="action" value="show_results">
+              
                 <label>What is your favorite food?</label>
                     <input type="radio" name="food" value="anna">Sandwiches<br>
                     <input type="radio" name="food" value="elsa">Popsicles<br>
