@@ -13,9 +13,9 @@ switch ($action){
     case 'continue':
         $name = filter_input(INPUT_POST, 'name');
         $gender = filter_input(INPUT_POST, 'gender');
-        include(survey.php);
         return $name;
         return $gender;
+        include(survey.php);
         break;
     case 'show_results':
         $food = filter_input(INPUT_POST, 'food');
@@ -121,6 +121,7 @@ switch ($action){
                 $oakn += 1;
                 return $oaken;
         break;}
-        break;
+        include 'results.php';
+break;
 }
 ?>
