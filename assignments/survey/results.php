@@ -51,8 +51,8 @@ function test_input($data){
               <p>Thank you, <?php echo $name?>!<br>
                   <?php echo $gender . ' is gender.';
                         echo $age . ' is age.';
-                        echo implode (', ', $education) . ' is education.'; ?>
-                  echo implode(', ', $_REQUEST['places']);
+                        echo implode (', ', $_POST['education']) . ' is education.'; ?>
+                  
       <?php echo count($male) ?> users are male.<br>
       <?php echo count($female)?> users are like female.<br>
       <?php echo count($teen) ?> users are 0-19.<br>
