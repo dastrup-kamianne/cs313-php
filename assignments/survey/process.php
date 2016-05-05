@@ -14,7 +14,6 @@ switch ($action){
         $name = filter_input(INPUT_POST, 'name');
         $gender = filter_input(INPUT_POST, 'gender');
         return $name;
-        return $gender;
         include(survey.php);
         break;
     case 'show_results':
@@ -121,6 +120,30 @@ switch ($action){
                 $oakn += 1;
                 return $oaken;
         break;}
+        if ($anna > $elsa && $anna > $queen && $anna > $bulda){
+            $answer = $anna;
+        }
+        elseif ($elsa > $anna && $elsa > $queen && $elsa > $bulda){
+            $answer = $elsa;
+        }
+        elseif ($queen > $anna && $queen > $elsa && $queen > $bulda){
+            $answer = $queen;
+        }
+        elseif ($bulda > $anna && $bulda > $queen && $bulda > $elsa){
+            $answer = $bulda;
+        }
+        elseif ($kristoff > $olaf && $kristoff > $hans && $kristoff > $oaken){
+            $answer = $kristoff;
+        }
+        elseif ($olaf > $kristoff && $olaf > $hans && $olaf > $oaken){
+            $answer = $olaf;
+        }
+        elseif ($hans > $olaf && $hans > $kristoff && $hans > $oaken){
+            $answer = $hans;
+        }
+        elseif ($oaken > $olaf && $oaken > $hans && $oaken > $kristoff){
+            $answer = $oaken;
+        }
         include 'results.php';
 break;
 }
