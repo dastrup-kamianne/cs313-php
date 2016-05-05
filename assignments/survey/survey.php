@@ -15,7 +15,7 @@
           Please take this survey below.
       </p><br>
       <div id="survey_box">
-      <form action="reults.php" method="post" id="survey_form">
+      <form action="results.php" method="post" id="survey_form">
           <label>Enter your name:</label>
           <input type="text" name="name"><br>
           
