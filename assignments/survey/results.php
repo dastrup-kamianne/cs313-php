@@ -51,7 +51,7 @@ function test_input($data){
               <p>Thank you, <?php echo $name?>!<br>
                   <?php echo $gender . ' is gender.';
                         echo $age . ' is age.';
-                        echo implode (', ', $_POST['education']) . ' is education.'; ?>
+                        echo implode (', ', $_REQUEST['education']) . ' is education.'; ?>
                   
       <?php echo count($male) ?> users are male.<br>
       <?php echo count($female)?> users are like female.<br>
