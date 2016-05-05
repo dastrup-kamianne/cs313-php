@@ -16,9 +16,10 @@ switch ($action){
         return $name;
         echo $name;
         echo $gender;
-        include(survey.php);
+        include(survey2.php);
         break;
     case 'show_results':
+        $name = filter_input(INPUT_POST, 'name');
         $food = filter_input(INPUT_POST, 'food');
         $hair = filter_input(INPUT_POST, 'hair');
         $activity = filter_input(INPUT_POST, 'activity');
