@@ -43,11 +43,12 @@ function test_input($data){
     return $data;
 }
 
-$myfile = fopen('results.txt', 'w') or die('Unable to open file!');
+$myfile = fopen('results.txt', 'a+') or die('Unable to open file!');
 fwrite($myfile,$name);
 fwrite($myfile,$gender);
 fwrite($myfile,$age);
 fwrite($myfile,$education);
+echo fread($myfile,filesize('results.txt'));
 fclose($myfile);
 ?>
       <div class="wrapper">
@@ -59,7 +60,7 @@ fclose($myfile);
               <p>Thank you, <?php echo $name?>!<br>
                   <?php echo $gender . ' is gender.';
                         echo $age . ' is age.';
-                        echo implode (', ', $_REQUEST['education']) . ' is education.'; ?>
+                        echo $education . ' is education.'; ?><br>
                   
       <?php echo count($male) ?> users are male.<br>
       <?php echo count($female)?> users are like female.<br>
