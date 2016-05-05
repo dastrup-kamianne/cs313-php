@@ -43,7 +43,7 @@ function test_input($data){
     return $data;
 }
 
-$myfile = fopen('results.txt', 'a+') or die('Unable to open file!');
+$myfile = fopen('results.txt', 'a') or die('Unable to open file!');
 fwrite($myfile,$name);
 fwrite($myfile,$gender);
 fwrite($myfile,$age);

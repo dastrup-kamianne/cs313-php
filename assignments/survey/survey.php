@@ -33,11 +33,11 @@
           <input type="radio" name="age" value="old">70+<br>
           
           <label>Education level (select all that apply):</label>
-          <input type="checkbox" name="education" value="hs">High School Graduate
-          <input type="checkbox" name="education" value="ad">Associate's Degree
-          <input type="checkbox" name="education" value="bd">Bachelor's Degree
-          <input type="checkbox" name="education" value="md">Master's Degree
-          <input type="checkbox" name="education" value="phd">PhD<br>
+          <input type="checkbox" name="education[]" value="hs">High School Graduate
+          <input type="checkbox" name="education[]" value="ad">Associate's Degree
+          <input type="checkbox" name="education[]" value="bd">Bachelor's Degree
+          <input type="checkbox" name="education[]" value="md">Master's Degree
+          <input type="checkbox" name="education[]" value="phd">PhD<br>
           
           <input type="submit" value="Submit">
           </form>
