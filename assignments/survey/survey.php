@@ -15,11 +15,11 @@
           Take this quiz to see which Frozen character you are most like.
       </p><br>
       <div id="survey_box">
-      
+      <?php if ($gender == NULL || $gender == false) { ?>
           <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="survey_form">
-        <?php if ($gender == NULL || $gender == false) {
-        echo  
-          '<label>Enter your name:</label>
+        
+          
+          <label>Enter your name:</label>
           <input type="text" name="name"><br>
           
           <label>Select your gender:</label>
@@ -27,10 +27,11 @@
           <input type="radio" name="gender" value="male">Male<br>
           
           <input type="submit" value="Next">
-          </form>';}
-          elseif ($gender == 'male'){
-              echo 
-                '<label>What is your favorite food?</label>
+          </form>
+          <?php ;}
+          elseif ($gender == 'male'){ ?>
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="survey_form">   
+                <label>What is your favorite food?</label>
                     <input type="radio" name="food" value="kristoff">Carrots<br>
                     <input type="radio" name="food" value="olaf">Snow Cones<br>
                     <input type="radio" name="food" value="hans">Sandwiches<br>
@@ -49,11 +50,11 @@
                     <input type="radio" name="activity" value="oaken">Soaking in a sauna<br>
           
                     <input type="submit" value="Submit">
-                    </form>';
+                    </form> <?php ;
           }
-          elseif ($gender == 'female'){
-              echo
-                '<label>What is your favorite food?</label>
+          elseif ($gender == 'female'){ ?>
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="survey_form">  
+                <label>What is your favorite food?</label>
                     <input type="radio" name="food" value="anna">Sandwiches<br>
                     <input type="radio" name="food" value="elsa">Popsicles<br>
                     <input type="radio" name="food" value="queen">Roast<br>
@@ -72,8 +73,8 @@
                     <input type="radio" name="activity" value="bulda">Singing loud<br>
           
                     <input type="submit" value="Submit">
-                    </form>';
-          }?>
+                    </form> <?php ;
+          } ?>
       </div>
               <a href='results.php'>Click here to go to the results</a><br>
             
