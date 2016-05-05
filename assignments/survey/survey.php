@@ -14,8 +14,9 @@
       <p>
           Take this quiz to see which Frozen character you are most like.
       </p><br>
+      <div id="survey_box">
       
-          '<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="survey_form">
+          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="survey_form">
         <?php if ($gender == NULL || $gender == false) {
         echo  
           '<label>Enter your name:</label>
@@ -73,9 +74,9 @@
                     <input type="submit" value="Submit">
                     </form>';
           }?>
-
-      <a href='results.php'>Click here to go to the results</a>
-        
+      </div>
+              <a href='results.php'>Click here to go to the results</a><br>
+            
     <footer>
     <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/footer.php'; ?>
     </footer>
