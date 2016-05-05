@@ -1,4 +1,3 @@
-<?php $answer = 'Anna';?>
 <!DOCTYPE html> 
 <html> 
  <head> 

@@ -14,6 +14,8 @@ switch ($action){
         $name = filter_input(INPUT_POST, 'name');
         $gender = filter_input(INPUT_POST, 'gender');
         return $name;
+        echo $name;
+        echo $gender;
         include(survey.php);
         break;
     case 'show_results':
