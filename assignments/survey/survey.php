@@ -15,10 +15,9 @@
           Please take this survey below.
       </p><br>
       <div id="survey_box">
-      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" 
-            method="post" id="survey_form">
+      <form action="reults.php" method="post" id="survey_form">
           <label>Enter your name:</label>
-          <input type="text" name="name"><br>
+          <input type="text" name="name"><span class='error'><?php echo $nameErr;?></span><br>
           
           <label>Select your gender:</label>
           <input type="radio" name="gender" value="female">Female
