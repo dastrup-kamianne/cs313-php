@@ -1,4 +1,12 @@
-<?php
+
+<!DOCTYPE html> 
+<html> 
+ <head> 
+ <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/meta-header.php'; ?>
+  </head> 
+
+  <body>
+      <?php
 $name = $gender = $age = $education = '';
 $nameErr = $genderErr = $ageErr = $educationErr = '';
 
@@ -34,14 +42,14 @@ function test_input($data){
     $data = htmlspecialchars($data);
     return $data;
 }
-?>
-<!DOCTYPE html> 
-<html> 
- <head> 
- <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/meta-header.php'; ?>
-  </head> 
 
-  <body>
+$myfile = fopen('results.txt', 'a+') or die('Unable to open file!');
+fwrite($myfile,$name);
+fwrite($myfile,$gender);
+fwrite($myfile,$age);
+fwrite($myfile,$education);
+fclose($myfile);
+?>
       <div class="wrapper">
      <header>
          <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/main-header.php'; ?>

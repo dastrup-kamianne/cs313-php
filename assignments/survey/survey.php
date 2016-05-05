@@ -8,7 +8,7 @@
       <div class="wrapper">
      <header>
          <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/main-header.php'; ?>
-         <h1>Which Frozen Character Are You?</h1>
+         <h1>Survey</h1>
      </header>
      
       <p>
