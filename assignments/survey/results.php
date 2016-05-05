@@ -1,3 +1,40 @@
+<?php
+$name = $gender = $age = $education = '';
+$nameErr = $genderErr = $ageErr = $educationErr = '';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+    
+  if (empty($_POST["name"])) {
+    $nameErr = "Name is required";
+  } else {
+    $name = test_input($_POST["name"]);
+  }
+
+  if (empty($_POST["gender"])) {
+    $genderErr = "Gender is required";
+  } else {
+    $gender = test_input($_POST["gender"]);
+  }
+
+  if (empty($_POST["age"])) {
+    $ageErr = "Age is required";
+  } else {
+    $age = test_input($_POST["age"]);
+  }
+
+  if (empty($_POST["education"])) {
+    $educationErr = "Education is required";
+  } else {
+    $education = test_input($_POST["education"]);
+  }
+
+}
+function test_input($data){
+    $data = trim($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+?>
 <!DOCTYPE html> 
 <html> 
  <head> 
@@ -11,7 +48,10 @@
          <h1>Results</h1>
      </header>
           <main>   
-      <p>Thank you, <?php echo $name?>!
+              <p>Thank you, <?php echo $name?>!<br>
+                  <?php echo $gender . ' is gender.';
+                        echo $age . ' is age.';
+                        echo $education . ' is education.'; ?>
       <?php echo count($male) ?> users are male.<br>
       <?php echo count($female)?> users are like female.<br>
       <?php echo count($teen) ?> users are 0-19.<br>
