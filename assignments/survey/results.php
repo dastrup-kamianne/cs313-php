@@ -123,20 +123,20 @@ echo 'female ' . $female;
                         echo $age . ' is age.';
                         echo $education . ' is education.'; ?><br>
                   
-      <?php echo count($male) ?> users are male.<br>
-      <?php echo count($female)?> users are like female.<br>
-      <?php echo count($teen) ?> users are 0-19.<br>
-      <?php echo count($twenty) ?> users are 20-29.<br>
-      <?php echo count($thirty) ?> users are 30-39.<br>
-      <?php echo count($forty) ?> users are 40-49.<br>
-      <?php echo count($fifty) ?> users are 50-59.<br>
-      <?php echo count($sixty) ?> users are 60-69.<br>
-      <?php echo count($old) ?> users are 70+.<br>
-      <?php echo count($hs)?> users have graduated High School.<br>
-      <?php echo count($ad)?> users have Associates Degrees.<br>
-      <?php echo count($bd)?> users have Bachelors Degrees.<br>
-      <?php echo count($md)?> users have Masters Degrees.<br>
-      <?php echo count($phd)?> users have a PhD.</p>
+      <?php echo $male ?> users are male.<br>
+      <?php echo $female?> users are female.<br>
+      <?php echo $teen ?> users are 0-19.<br>
+      <?php echo $twenty ?> users are 20-29.<br>
+      <?php echo $thirty ?> users are 30-39.<br>
+      <?php echo $forty ?> users are 40-49.<br>
+      <?php echo $fifty ?> users are 50-59.<br>
+      <?php echo $sixty ?> users are 60-69.<br>
+      <?php echo $old ?> users are 70+.<br>
+      <?php echo $hs?> users have graduated High School.<br>
+      <?php echo $ad?> users have Associates Degrees.<br>
+      <?php echo $bd?> users have Bachelors Degrees.<br>
+      <?php echo $md?> users have Masters Degrees.<br>
+      <?php echo $phd?> users have a PhD.</p>
         </main>
     <footer>
     <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/footer.php'; ?>
