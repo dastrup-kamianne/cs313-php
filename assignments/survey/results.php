@@ -45,7 +45,7 @@ function test_input($data){
 //chmod('results.txt', 0777);
 $myfile = fopen('results.txt', 'a+'); //or die('Unable to open file!');
 
-if(is_file($myfile)== TRUE){
+if(is_file('results.txt')== TRUE){
     echo 'Is a file';
 }
 else{
