@@ -24,6 +24,9 @@ $old = fgets($myfile);
 $text = file_get_contents('results.txt');
 $text = htmlspecialchars($text);
 
+echo 'test male type is ';
+var_dump($male);
+
 echo 'info ' . $text;
 fclose($myfile);
 
@@ -44,10 +47,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
   } else {
     //$gender = test_input($_POST["gender"]);
     if ($gender == 'male'){
-        $malect = intval($male) + 1;
+        $male = intval($male) + 1;
     }
     else {
-        $femalect = intval($female) + 1;
+        $female = intval($female) + 1;
     }
   }
 
@@ -91,6 +94,9 @@ function test_input($data){
     return $data;
 }
 
+echo 'test male type is ';
+var_dump($male);
+
 $myfile = fopen('results.txt', 'w') or die('Unable to open file!');
 
 fwrite($myfile,$malect);
@@ -109,8 +115,8 @@ $text = htmlspecialchars($text);
 echo 'info ' . $text;
 fclose($myfile);
 
-echo 'male ' . $malect;
-echo 'female ' . $femalect;
+echo 'male ' . $male;
+echo 'female ' . $female;
 ?>
       <div class="wrapper">
      <header>
@@ -123,8 +129,8 @@ echo 'female ' . $femalect;
                         echo $age . ' is age.';
                         echo $education . ' is education.'; ?><br>
                   
-      <?php echo $malect ?> users are male.<br>
-      <?php echo $femalect?> users are female.<br>
+      <?php echo $male ?> users are male.<br>
+      <?php echo $female?> users are female.<br>
       <?php echo $teen ?> users are 0-19.<br>
       <?php echo $twenty ?> users are 20-29.<br>
       <?php echo $thirty ?> users are 30-39.<br>
