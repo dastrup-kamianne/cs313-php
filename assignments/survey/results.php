@@ -44,10 +44,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
   } else {
     $gender = test_input($_POST["gender"]);
     if ($gender == 'male'){
-        $male +=1;
+        $male = (int)$male + 1;
     }
     else {
-        $female +=1;
+        $female = (int)$female + 1;
     }
   }
 
@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
   } else {
     $age = test_input($_POST["age"]);
     if ($age == 'teen'){
-        $teen =+1;
+        $teen = (int)$teen + 1;
     }
     elseif ($age == 'twenty'){
         $twenty +=1;
