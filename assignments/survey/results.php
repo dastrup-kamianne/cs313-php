@@ -7,6 +7,8 @@
 
   <body>
       <?php
+      
+      include 'results.txt';
 $name = $gender = $age = $education = '';
 $nameErr = $genderErr = $ageErr = $educationErr = '';
 
@@ -33,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
   if (empty($_POST["education"])) {
     $educationErr = "Education is required";
   } else {
-    $education = implode($_POST["education"]);
+    $education = implode(', ', $_POST["education"]);
   }
 
 }
