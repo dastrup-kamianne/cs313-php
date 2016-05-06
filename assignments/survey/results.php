@@ -100,17 +100,17 @@ function test_input($data){
 echo 'test male type is ';
 var_dump($male);
 
-$myfile = fopen('results.txt', 'w') or die('Unable to open file!');
+$myfilew = fopen('results.txt', 'w') or die('Unable to open file!');
 
-fwrite($myfile,$malect);
-fwrite($myfile,$femalect);
-fwrite($myfile,$teen);
-fwrite($myfile,$twenty);
-fwrite($myfile,$thirty);
-fwrite($myfile,$forty);
-fwrite($myfile,$fifty);
-fwrite($myfile,$sixty);
-fwrite($myfile,$old);
+fwrite($myfilew,$male);
+fwrite($myfilew,$female);
+fwrite($myfilew,$teen);
+fwrite($myfilew,$twenty);
+fwrite($myfilew,$thirty);
+fwrite($myfilew,$forty);
+fwrite($myfilew,$fifty);
+fwrite($myfilew,$sixty);
+fwrite($myfilew,$old);
 
 $text = file_get_contents('results.txt');
 $text = htmlspecialchars($text);
