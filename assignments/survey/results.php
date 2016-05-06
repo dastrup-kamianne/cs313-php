@@ -7,7 +7,6 @@
 
   <body>
       <?php
-      
       include 'results.txt';
 $name = $gender = $age = $education = '';
 $nameErr = $genderErr = $ageErr = $educationErr = '';
@@ -51,7 +50,7 @@ fwrite($myfile,$gender);
 fwrite($myfile,$age);
 fwrite($myfile,$education);
 echo fread($myfile,filesize('results.txt'));
-fclose($myfile);
+//fclose($myfile);
 ?>
       <div class="wrapper">
      <header>
@@ -83,5 +82,6 @@ fclose($myfile);
     <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/footer.php'; ?>
     </footer>
       </div>
+      <?php fclose($myfile); ?>
  </body>
 </html>
