@@ -7,7 +7,7 @@
 
   <body>
       <?php
-      include 'results.txt';
+      
 $name = $gender = $age = $education = '';
 $nameErr = $genderErr = $ageErr = $educationErr = '';
 
@@ -44,13 +44,13 @@ function test_input($data){
     return $data;
 }
 
-$myfile = fopen('results.txt', 'a+') or die('Unable to open file!');
+$myfile = fopen('results.txt', 'w') or die('Unable to open file!');
 fwrite($myfile,$name);
 fwrite($myfile,$gender);
 fwrite($myfile,$age);
 fwrite($myfile,$education);
 echo fread($myfile,filesize('results.txt'));
-//fclose($myfile);
+fclose($myfile);
 ?>
       <div class="wrapper">
      <header>
@@ -82,6 +82,5 @@ echo fread($myfile,filesize('results.txt'));
     <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/footer.php'; ?>
     </footer>
       </div>
-      <?php fclose($myfile); ?>
  </body>
 </html>
