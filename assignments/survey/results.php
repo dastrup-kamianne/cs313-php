@@ -44,12 +44,13 @@ function test_input($data){
     return $data;
 }
 
-$myfile = fopen('results.txt', 'w') or die('Unable to open file!');
-fwrite($myfile,$name);
-fwrite($myfile,$gender);
-fwrite($myfile,$age);
-fwrite($myfile,$education);
-echo fread($myfile,filesize('results.txt'));
+$myfile = fopen('results.txt', 'a+') or die('Unable to open file!');
+$text = 'testing';
+fwrite($myfile,$text);
+//fwrite($myfile,$gender);
+//fwrite($myfile,$age);
+//fwrite($myfile,$education);
+//echo fread($myfile,filesize('results.txt'));
 fclose($myfile);
 ?>
       <div class="wrapper">
