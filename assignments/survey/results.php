@@ -21,10 +21,10 @@ $fifty = fgets($myfile);
 $sixty = fgets($myfile);
 $old = fgets($myfile);
 
-//$text = file_get_contents('results.txt');
-//$text = htmlspecialchars($text);
+$text = file_get_contents('results.txt');
+$text = htmlspecialchars($text);
 
-//echo 'info ' . $text;
+echo 'info ' . $text;
 fclose($myfile);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
