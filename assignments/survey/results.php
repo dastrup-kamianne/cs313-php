@@ -44,9 +44,31 @@ function test_input($data){
     return $data;
 }
 
-$myfile = fopen('results.txt', 'a+') or die('Unable to open file!');
-$text = 'testing';
-fwrite($myfile,$text);
+$myfile = fopen('results.txt', 'a+'); //or die('Unable to open file!');
+if(!$myfile){
+    echo 'Could not create a file point.';
+    exit;
+}
+else {
+    if(!is_writable($myfile)){
+        echo 'Cannot write to file [' .$myfile . ']';
+        exit;
+    }
+    else{
+        foreach($myfile as $line){
+            $write =fwrite($myfile,$line);
+        }
+        if($write !== FALSE){
+            echo 'success. the file was written...';
+        }
+    }
+    $close = fclose($myfile);
+}
+
+
+
+
+//fwrite($myfile,$name);
 //fwrite($myfile,$gender);
 //fwrite($myfile,$age);
 //fwrite($myfile,$education);
