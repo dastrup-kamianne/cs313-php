@@ -102,8 +102,11 @@ var_dump($male);
 
 $myfilew = fopen('results.txt', 'w') or die('Unable to open file!');
 
-fwrite($myfilew,$male.\n);
-fwrite($myfilew,$female.\n);
+$male = $male . \n;
+$female = $female . \n;
+
+fwrite($myfilew,$male);
+fwrite($myfilew,$female);
 fwrite($myfilew,$teen);
 fwrite($myfilew,$twenty);
 fwrite($myfilew,$thirty);
