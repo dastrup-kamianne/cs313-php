@@ -43,14 +43,7 @@ function test_input($data){
 }
 
 //chmod('results.txt', 0777);
-$myfile = fopen('results.txt', 'a+'); //or die('Unable to open file!');
-
-if(is_file('results.txt')== TRUE){
-    echo 'Is a file';
-}
-else{
-    echo 'Not a file';
-}
+$myfile = fopen('results.txt', 'ab'); //or die('Unable to open file!');
 
 //test if file is create and writable
 /*echo $myfile;
@@ -76,13 +69,13 @@ else {
 
 
 
-
-//fwrite($myfile,$name);
+$name = "Kathy";
+fwrite($myfile,$name);
 //fwrite($myfile,$gender);
 //fwrite($myfile,$age);
 //fwrite($myfile,$education);
 //echo fread($myfile,filesize('results.txt'));
-//fclose($myfile);
+fclose($myfile);
 ?>
       <div class="wrapper">
      <header>
