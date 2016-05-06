@@ -44,6 +44,7 @@ function test_input($data){
     return $data;
 }
 
+chmod('results.txt', 0777);
 $myfile = fopen('results.txt', 'a+'); //or die('Unable to open file!');
 if(!$myfile){
     echo 'Could not create a file point.';
