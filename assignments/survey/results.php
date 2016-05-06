@@ -42,9 +42,18 @@ function test_input($data){
     return $data;
 }
 
-chmod('results.txt', 0777);
+//chmod('results.txt', 0777);
 $myfile = fopen('results.txt', 'a+'); //or die('Unable to open file!');
-echo $myfile;
+
+if(is_file($myfile)== TRUE){
+    echo 'Is a file';
+}
+else{
+    echo 'Not a file';
+}
+
+//test if file is create and writable
+/*echo $myfile;
 if(!$myfile){
     echo 'Could not create a file point.';
     exit;
@@ -63,7 +72,7 @@ else {
         }
     }
     $close = fclose($myfile);
-}
+}*/
 
 
 
