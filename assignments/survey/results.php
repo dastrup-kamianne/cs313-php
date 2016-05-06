@@ -9,6 +9,24 @@
 $name = $gender = $age = $education = '';
 $nameErr = $genderErr = $ageErr = $educationErr = '';
 
+$myfile = fopen('results.txt', 'r') or die('Unable to open file!');
+
+$male = fgets($myfile);
+$female = fgets($myfile);
+$teen = fgets($myfile);
+$twenty = fgets($myfile);
+$thirty = fgets($myfile);
+$forty = fgets($myfile);
+$fifty = fgets($myfile);
+$sixty = fgets($myfile);
+$old = fgets($myfile);
+
+//$text = file_get_contents('results.txt');
+//$text = htmlspecialchars($text);
+
+//echo 'info ' . $text;
+fclose($myfile);
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     
   if (empty($_POST["name"])) {
@@ -70,17 +88,22 @@ function test_input($data){
     return $data;
 }
 
-$myfile = fopen('results.txt', 'ab') or die('Unable to open file!');
+$myfile = fopen('results.txt', 'w') or die('Unable to open file!');
 
-fwrite($myfile,$name);
-fwrite($myfile,$gender);
-fwrite($myfile,$age);
-fwrite($myfile,$education);
+fwrite($myfile,$male);
+fwrite($myfile,$female);
+fwrite($myfile,$teen);
+fwrite($myfile,$twenty);
+fwrite($myfile,$thirty);
+fwrite($myfile,$forty);
+fwrite($myfile,$fifty);
+fwrite($myfile,$sixty);
+fwrite($myfile,$old);
 
-$text = file_get_contents('results.txt');
-$text = htmlspecialchars($text);
+//$text = file_get_contents('results.txt');
+//$text = htmlspecialchars($text);
 
-echo 'info ' . $text;
+//echo 'info ' . $text;
 fclose($myfile);
 ?>
       <div class="wrapper">
