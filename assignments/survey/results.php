@@ -15,18 +15,46 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $nameErr = "Name is required";
   } else {
     $name = test_input($_POST["name"]);
+        
   }
 
   if (empty($_POST["gender"])) {
     $genderErr = "Gender is required";
   } else {
     $gender = test_input($_POST["gender"]);
+    if ($gender == 'male'){
+        $male +=1;
+    }
+    else {
+        $female +=1;
+    }
   }
 
   if (empty($_POST["age"])) {
     $ageErr = "Age is required";
   } else {
     $age = test_input($_POST["age"]);
+    if ($age == 'teen'){
+        $teen =+1;
+    }
+    elseif ($age == 'twenty'){
+        $twenty +=1;
+    }
+    elseif ($age == 'thirty'){
+        $thirty +=1;
+    }
+    elseif ($age == 'forty'){
+        $forty +=1;
+    }
+    elseif ($age == 'fifty'){
+        $fifty +=1;
+    }
+    elseif ($age == 'sixty'){
+        $sixty +=1;
+    }
+    else{
+        $old +=1;
+    }
   }
 
   if (empty($_POST["education"])) {
@@ -42,39 +70,16 @@ function test_input($data){
     return $data;
 }
 
-//chmod('results.txt', 0777);
-$myfile = fopen('results.txt', 'ab'); //or die('Unable to open file!');
-
-//test if file is create and writable
-/*echo $myfile;
-if(!$myfile){
-    echo 'Could not create a file point.';
-    exit;
-}
-else {
-    if(!is_writable($myfile)){
-        echo 'Cannot write to file [' .$myfile . ']';
-        exit;
-    }
-    else{
-        foreach($myfile as $line){
-            $write =fwrite($myfile,$line);
-        }
-        if($write !== FALSE){
-            echo 'success. the file was written...';
-        }
-    }
-    $close = fclose($myfile);
-}*/
-
-
+$myfile = fopen('results.txt', 'ab') or die('Unable to open file!');
 
 fwrite($myfile,$name);
 fwrite($myfile,$gender);
 fwrite($myfile,$age);
 fwrite($myfile,$education);
-//echo fread($myfile,filesize('results.txt'));
+
 $text = file_get_contents('results.txt');
+$text = htmlspecialchars($text);
+
 echo 'info ' . $text;
 fclose($myfile);
 ?>
