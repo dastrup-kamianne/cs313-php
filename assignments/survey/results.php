@@ -27,6 +27,9 @@ $text = htmlspecialchars($text);
 echo 'info ' . $text;
 fclose($myfile);
 
+echo 'male ' . $male;
+echo 'female ' . $female;
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     
   if (empty($_POST["name"])) {
@@ -105,6 +108,9 @@ $text = htmlspecialchars($text);
 
 echo 'info ' . $text;
 fclose($myfile);
+
+echo 'male ' . $male;
+echo 'female ' . $female;
 ?>
       <div class="wrapper">
      <header>
