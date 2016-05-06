@@ -100,10 +100,10 @@ fwrite($myfile,$fifty);
 fwrite($myfile,$sixty);
 fwrite($myfile,$old);
 
-//$text = file_get_contents('results.txt');
-//$text = htmlspecialchars($text);
+$text = file_get_contents('results.txt');
+$text = htmlspecialchars($text);
 
-//echo 'info ' . $text;
+echo 'info ' . $text;
 fclose($myfile);
 ?>
       <div class="wrapper">
