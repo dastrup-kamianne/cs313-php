@@ -70,9 +70,9 @@ else {
 
 
 fwrite($myfile,$name);
-//fwrite($myfile,$gender);
-//fwrite($myfile,$age);
-//fwrite($myfile,$education);
+fwrite($myfile,$gender);
+fwrite($myfile,$age);
+fwrite($myfile,$education);
 //echo fread($myfile,filesize('results.txt'));
 $text = file_get_contents('results.txt');
 echo 'info ' . $text;
