@@ -119,6 +119,7 @@ $qcount1 = fgets($myfile);
 $bcount1 = fgets($myfile);
 fclose($myfile);
 
+echo "Anna" . $acount1 . " Elsa" . $ecount1;
 
 switch($answer){
     case 'Kristoff':
@@ -147,7 +148,7 @@ switch($answer){
         break;
 }        
         
-
+echo "Anna" . $acount1 . " Elsa" . $ecount1;
 
 
 $myfile = fopen('results.txt', 'w') or die('Unable to open file!');
@@ -204,22 +205,34 @@ fclose($myfile);
               <p><?php echo $name?>, you are most like <?php echo $answer?>!</p>
       
               <div id='results'>
+<?php 
+$myfile = fopen('results.txt', 'r') or die('Unable to open file!');
+$kcount = fgets($myfile);
+$olcount = fgets($myfile);
+$hcount = fgets($myfile);
+$oacount = fgets($myfile);
+$acount = fgets($myfile);
+$ecount = fgets($myfile);
+$qcount = fgets($myfile);
+$bcount = fgets($myfile);
+fclose($myfile);
+?>
       <img src='Kristoff.jpeg' alt='Kristoff' class='frozen'>
-      <?php echo $kcount ?> users are like Kristoff.<br>
+      <?php echo $kcount ?> users are like Kristoff.<br><br>
       <img src='Olaf.jpeg' alt='Olaf' class='frozen'>
-      <?php echo $olcount?> users are like Olaf.<br>
+      <?php echo $olcount?> users are like Olaf.<br><br>
       <img src='Hans.jpeg' alt='Hans' class='frozen'>
-      <?php echo $hans ?> users are like Hans.<br>
+      <?php echo $hans ?> users are like Hans.<br><br>
       <img src='Oaken.jpg' alt='Oaken' class='frozen'>
-      <?php echo $oacount ?> users are like Oaken.<br>
+      <?php echo $oacount ?> users are like Oaken.<br><br>
       <img src='Anna.jpeg' alt='Anna' class='frozen'>
-      <?php echo $acount ?> users are like Anna.<br>
+      <?php echo $acount ?> users are like Anna.<br><br>
       <img src='Elsa.jpeg' alt='Elsa' class='frozen'>
-      <?php echo $ecount ?> users are like Elsa.<br>
+      <?php echo $ecount ?> users are like Elsa.<br><br>
       <img src='Queen_Iduna.png' alt='Queen Iduna' class='frozen'>
-      <?php echo $qcount ?> users are like Queen Iduna.<br>
+      <?php echo $qcount ?> users are like Queen Iduna.<br><br>
       <img src='Bulda.jpg' alt='Bulda' class='frozen'>
-      <?php echo $bcount ?> users are Bulda.<br>
+      <?php echo $bcount ?> users are Bulda.<br><br>
 
               </div>
         </main>
