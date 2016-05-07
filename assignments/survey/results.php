@@ -21,13 +21,13 @@ $fifty = fgets($myfile);
 $sixty = fgets($myfile);
 $old = fgets($myfile);
 
-$text = file_get_contents('results.txt');
+/*$text = file_get_contents('results.txt');
 $text = htmlspecialchars($text);
 
 echo 'test male type is ';
 var_dump($male);
 
-echo 'info ' . $text;
+echo 'info ' . $text;*/
 fclose($myfile);
 
 echo 'male ' . $male;
@@ -45,10 +45,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
   if (empty($_POST["gender"])) {
     $genderErr = "Gender is required";
   } else {
-    //$gender = test_input($_POST["gender"]);
+    $gender = test_input($_POST["gender"]);
     if ($gender == 'male'){
-        $male += 1;
-        
+        $male += 1;    
     }
     else {
         $female = intval($female) + 1;
@@ -60,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
   } else {
     $age = test_input($_POST["age"]);
     if ($age == 'teen'){
-        $teen = (int)$teen + 1;
+        $teen += 1;
     }
     elseif ($age == 'twenty'){
         $twenty +=1;
@@ -95,8 +94,8 @@ function test_input($data){
     return $data;
 }
 
-echo 'test male type is ';
-var_dump($male);
+/*echo 'test male type is ';
+var_dump($male);*/
 
 $myfile = fopen('results.txt', 'w') or die('Unable to open file!');
 
@@ -110,10 +109,10 @@ fwrite($myfile,$fifty . "\n");
 fwrite($myfile,$sixty . "\n");
 fwrite($myfile,$old . "\n");
 
-$text = file_get_contents('results.txt');
+/*$text = file_get_contents('results.txt');
 $text = htmlspecialchars($text);
 
-echo 'info ' . $text;
+echo 'info ' . $text;*/
 fclose($myfile);
 
 echo 'male ' . $male;
