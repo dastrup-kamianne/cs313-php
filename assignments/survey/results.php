@@ -100,18 +100,15 @@ var_dump($male);
 
 $myfile = fopen('results.txt', 'w') or die('Unable to open file!');
 
-$male = 'yoda';
-$female = 'leia';
-
 fwrite($myfile,$male . "\n");
-fwrite($myfile,$female);
-fwrite($myfile,$teen);
-fwrite($myfile,$twenty);
-fwrite($myfile,$thirty);
-fwrite($myfile,$forty);
-fwrite($myfile,$fifty);
-fwrite($myfile,$sixty);
-fwrite($myfile,$old);
+fwrite($myfile,$female . "\n");
+fwrite($myfile,$teen . "\n");
+fwrite($myfile,$twenty . "\n");
+fwrite($myfile,$thirty . "\n");
+fwrite($myfile,$forty . "\n");
+fwrite($myfile,$fifty . "\n");
+fwrite($myfile,$sixty . "\n");
+fwrite($myfile,$old . "\n");
 
 $text = file_get_contents('results.txt');
 $text = htmlspecialchars($text);
