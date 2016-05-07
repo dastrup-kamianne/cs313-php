@@ -242,6 +242,12 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
 
               </div>
         </main>
+          
+          <?php if(!isset($_COOKIE[$cookie_name])){
+          echo 'is not set';}
+          else {
+              echo "is set";
+          } ?>
     <footer>
     <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/footer.php'; ?>
     </footer>
