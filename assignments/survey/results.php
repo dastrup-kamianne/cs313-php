@@ -6,87 +6,70 @@
  <body>
      <?php
      
-$name = $gender = $age = $education = '';
-$nameErr = $genderErr = $ageErr = $educationErr = '';
+$kristoff = $olaf = $hans = $oaken = $anna = $elsa = $bulda = $queen = 0;
 
-$myfile = fopen('results.txt', 'r') or die('Unable to open file!');
-
-$male = fgets($myfile);
-$female = fgets($myfile);
-$teen = fgets($myfile);
-$twenty = fgets($myfile);
-$thirty = fgets($myfile);
-$forty = fgets($myfile);
-$fifty = fgets($myfile);
-$sixty = fgets($myfile);
-$old = fgets($myfile);
-
-/*$text = file_get_contents('results.txt');
-$text = htmlspecialchars($text);
-
-echo 'test male type is ';
-var_dump($male);
-
-echo 'info ' . $text;*/
-fclose($myfile);
-
-echo 'male ' . $male;
-echo 'female ' . $female;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     
-  if (empty($_POST["name"])) {
-    $nameErr = "Name is required";
-  } else {
-    $name = test_input($_POST["name"]);
-        
+  $name = test_input($_POST["name"]);
+  $gender = test_input($_POST["gender"]);
+  
+  $food = test_input($_POST["food"]);
+  if ($food == 'kristoff'){
+      $kristoff += 1;
+  }elseif($food == 'olaf'){
+      $olaf += 1;
+  }elseif($food == 'hans'){
+      $hans += 1;
+  }elseif($food == 'oaken'){
+      $oaken += 1;
+  }elseif($food == 'anna'){
+      $anna += 1;
+  }elseif($food == 'elsa'){
+      $elsa += 1;
+  }elseif($food == 'queen'){
+      $queen += 1;
+  }else{
+      $bulda += 1;
   }
-
-  if (empty($_POST["gender"])) {
-    $genderErr = "Gender is required";
-  } else {
-    $gender = test_input($_POST["gender"]);
-    if ($gender == 'male'){
-        $male += 1;
-    }
-    else {
-        $female = intval($female) + 1;
-    }
+  
+  $hair = test_input($_POST["hair"]);
+  if ($hair == 'kristoff'){
+      $kristoff += 1;
+  }elseif($hair == 'olaf'){
+      $olaf += 1;
+  }elseif($hair == 'hans'){
+      $hans += 1;
+  }elseif($hair == 'oaken'){
+      $oaken += 1;
+  }elseif($hair == 'anna'){
+      $anna += 1;
+  }elseif($hair == 'elsa'){
+      $elsa += 1;
+  }elseif($hair == 'queen'){
+      $queen += 1;
+  }else{
+      $bulda += 1;
   }
-
-  if (empty($_POST["age"])) {
-    $ageErr = "Age is required";
-  } else {
-    $age = test_input($_POST["age"]);
-    if ($age == 'teen'){
-        $teen += 1;
-    }
-    elseif ($age == 'twenty'){
-        $twenty +=1;
-    }
-    elseif ($age == 'thirty'){
-        $thirty +=1;
-    }
-    elseif ($age == 'forty'){
-        $forty +=1;
-    }
-    elseif ($age == 'fifty'){
-        $fifty +=1;
-    }
-    elseif ($age == 'sixty'){
-        $sixty +=1;
-    }
-    else{
-        $old +=1;
-    }
-  }
-
-  if (empty($_POST["education"])) {
-    $educationErr = "Education is required";
-  } else {
-    $education = implode(', ', $_POST["education"]);
-  }
-
+  
+  $activity = test_input($_POST["activity"]);
+  if ($activity == 'kristoff'){
+      $kristoff += 1;
+  }elseif($activity == 'olaf'){
+      $olaf += 1;
+  }elseif($activity == 'hans'){
+      $hans += 1;
+  }elseif($activity == 'oaken'){
+      $oaken += 1;
+  }elseif($activity == 'anna'){
+      $anna += 1;
+  }elseif($activity == 'elsa'){
+      $elsa += 1;
+  }elseif($activity == 'queen'){
+      $queen += 1;
+  }else{
+      $bulda += 1;
+  } 
 }
 function test_input($data){
     $data = trim($data);
@@ -94,63 +77,106 @@ function test_input($data){
     return $data;
 }
 
-/*echo 'test male type is ';
-var_dump($male);*/
+if ($gender == 'male'){
+if($kristoff >= $olaf && $kristoff >= $hans && $kristoff >= $oaken){
+    $answer == 'Kristoff';
+}elseif($olaf > $kristoff && $olaf > $hans && $olaf > $oaken){
+    $answer == 'Olaf';
+}elseif($hans > $kristoff && $hans > $olaf && $hans > $oaken){
+    $answer == 'Hans';
+}else{
+    $answer == 'Oaken';}
+}
+elseif ($gender == 'female'){
+if($anna >= $elsa && $anna >= $queen && $anna >= $bulda){
+    $answer == 'Anna';
+}elseif($elsa > $anna && $elsa > $queen && $elsa > $bulda){
+    $answer == 'Elsa';
+}elseif($queen > $anna && $queen > $elsa && $queen > $bulda){
+    $answer == 'Queen Iduna';   
+}else{
+    $answer == "Bulda";}
+}
+
+$myfile = fopen('results.txt', 'r') or die('Unable to open file!');
+$kcount = fgets($myfile);
+$olcount = fgets($myfile);
+$hcount = fgets($myfile);
+$oacount = fgets($myfile);
+$acount = fgets($myfile);
+$ecount = fgets($myfile);
+$qcount = fgets($myfile);
+$bcount = fgets($myfile);
+fclose($myfile);
+
+
+switch($answer){
+    case 'Kristoff':
+        $kcount += 1;
+        break;
+    case 'Olaf':
+        $olcount += 1;
+        break;
+    case 'Hans':
+        $hcount += 1;
+        break;
+    case 'Oaken':
+        $oacount += 1;
+        break;
+    case 'Anna':
+        $acount += 1;
+        break;
+    case 'Elsa':
+        $ecount += 1;
+        break;
+    case 'Queen Iduna':
+        $qcount += 1;
+        break;
+    case 'Bulda':
+        $bcount += 1;
+        break;
+}        
+        
+
+
 
 $myfile = fopen('results.txt', 'w') or die('Unable to open file!');
 
-/*function writeResults($count){
-    if($count == 0){
-        fwrite($myfile,$count);
-    }else{
-        fwrite($myfile,$count . "\n");
-    }
-}*/
-if ($male == 0){
-    fwrite($myfile,$male);
+if ($kcount == 0){
+    fwrite($myfile,$kcount);
 }else{
-fwrite($myfile,$male . "\r\n");}
-if ($female == 0){
-    fwrite($myfile,$female);
+fwrite($myfile,$kcount . "\r\n");}
+if ($olcount == 0){
+    fwrite($myfile,$olcount);
 }else{
-fwrite($myfile,$female . "\r\n");}
-if ($teen == 0){
-    fwrite($myfile,$teen);
+fwrite($myfile,$olcount . "\r\n");}
+if ($hcount == 0){
+    fwrite($myfile,$hcount);
 }else{
-    fwrite($myfile,$teen . "\r\n");}
-if ($twenty == 0){
-    fwrite($myfile,$twenty);
+    fwrite($myfile,$hcount . "\r\n");}
+if ($oacount == 0){
+    fwrite($myfile,$oacount);
 }else{
-    fwrite($myfile,$twenty . "\r\n");}
-if ($thirty == 0){
-    fwrite($myfile,$thirty);
+    fwrite($myfile,$oacount . "\r\n");}
+if ($acount == 0){
+    fwrite($myfile,$acount);
 }else{
-    fwrite($myfile,$thirty . "\r\n");}
-if ($forty == 0){
-    fwrite($myfile,$forty);
+    fwrite($myfile,$acount . "\r\n");}
+if ($ecount == 0){
+    fwrite($myfile,$ecount);
 }else{
-    fwrite($myfile,$forty . "\r\n");}
-if ($fifty == 0){
-    fwrite($myfile,$fifty);
+    fwrite($myfile,$ecount . "\r\n");}
+if ($qcount == 0){
+    fwrite($myfile,$qcount);
 }else{
-    fwrite($myfile,$fifty . "\r\n");}
-if ($sixy == 0){
-    fwrite($myfile,$sixy);
+    fwrite($myfile,$qcount . "\r\n");}
+if ($bcount == 0){
+    fwrite($myfile,$bcount);
 }else{
-    fwrite($myfile,$sixty . "\r\n");}
-if ($old == 0){
-    fwrite($myfile,$old);
-}else{
-    fwrite($myfile,$old . "\r\n");}
+    fwrite($myfile,$bcount . "\r\n");}
 
-/*$text = file_get_contents('results.txt');
-$text = htmlspecialchars($text);
-
-echo 'info ' . $text;*/
 fclose($myfile);
 
-echo 'male ' . $male;
-echo 'female ' . $female;
 ?>
       <div class="wrapper">
      <header>

@@ -8,14 +8,14 @@
       <div class="wrapper">
      <header>
          <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/main-header.php'; ?>
-         <h1>Survey</h1>
+         <h1>Which Frozen Character Are You?</h1>
      </header>
      
       <p>
-          Please take this survey below.
+          Take the quiz below to find out which Frozen character you are.
       </p><br>
       <div id="survey_box">
-      <form action="results.php" method="post" id="survey_form">
+      <form action="survey2.php" method="post" id="survey_form">
           <label>Enter your name:</label>
           <input type="text" name="name"><span class='error'><?php echo $nameErr;?></span><br>
           
@@ -23,7 +23,7 @@
           <input type="radio" name="gender" value="female">Female
           <input type="radio" name="gender" value="male">Male<br>
           
-          <label>Select your age:</label>
+          <!--<label>Select your age:</label>
           <input type="radio" name="age" value="teen">0-19
           <input type="radio" name="age" value="twenty">20-29
           <input type="radio" name="age" value="thirty">30-39
@@ -37,9 +37,9 @@
           <input type="checkbox" name="education[]" value="ad">Associate's Degree
           <input type="checkbox" name="education[]" value="bd">Bachelor's Degree
           <input type="checkbox" name="education[]" value="md">Master's Degree
-          <input type="checkbox" name="education[]" value="phd">PhD<br>
+          <input type="checkbox" name="education[]" value="phd">PhD<br>-->
           
-          <input type="submit" value="Submit">
+          <input type="submit" value="Next">
           </form>
           
       </div>
