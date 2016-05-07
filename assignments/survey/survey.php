@@ -11,7 +11,8 @@
          <h1>Which Frozen Character Are You?</h1>
      </header>
      <?php
-     if (!isset($_COOKIE[$cookie_name])){ ?>
+     if (!isset($_COOKIE[$cookie_name])){ 
+         echo 'is not set';?>
       <p>
           Take the quiz below to find out which Frozen character you are.
       </p><br>
@@ -30,7 +31,8 @@
       </div>
               <a href='results.php'>Click here to go to the results</a><br>
      <?php ;}
-     else {?>
+     else {
+         echo 'is set';?>
               <p>You have already taken this quiz.</p><br>
               <a href='results.php'>Click here to go to the results</a><br>
      <?php ;} ?>

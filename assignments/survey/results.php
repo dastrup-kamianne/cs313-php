@@ -1,9 +1,4 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-<?php include $_SERVER['DOCUMENT_ROOT'].'/modules/meta-header.php'; ?>
- </head> 
- <body>
+
      <?php
      
 $kristoff = $olaf = $hans = $oaken = $anna = $elsa = $bulda = $queen = 0;
@@ -207,19 +202,23 @@ $cookie_name = $name;
 $cookie_value = $answer;
 setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
 ?>
+
+<!DOCTYPE html> 
+<html> 
+<head> 
+<?php include $_SERVER['DOCUMENT_ROOT'].'/modules/meta-header.php'; ?>
+ </head> 
+ <body>
       <div class="wrapper">
      <header>
          <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/main-header.php'; ?>
          <h1>Results</h1>
      </header>
           <main>
-            <?php if ($_SERVER['REQUEST_METHOD'] == 'POST'){ 
-              if (!isset($_COOKIE[$cookie_name])){ ?>
-                <p><?php echo $name?>, you are most like <?php echo $answer?>!</p>
-            <?php ;} 
-              else {?>
+            <?php
+            if (isset($_COOKIE[$cookie_name])){ ?>
                 <p><?php echo $cookie_name?>, you are most like <?php echo $cookie_value?>!</p>
-            <?php ;} ;} ?>    
+            <?php ;} ?>    
                 
               <div id='results'>
 
