@@ -193,7 +193,6 @@ if($bcount == 0){
 fwrite($myfile,$bcount."\n\r");}
 
 fclose($myfile);
-
 ?>
       <div class="wrapper">
      <header>
