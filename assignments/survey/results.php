@@ -101,7 +101,7 @@ elseif ($gender == 'female'){
     }elseif($elsa > $anna && $elsa > $queen && $elsa > $bulda){
     $answer = 'Elsa';
     }elseif($queen > $anna && $queen > $elsa && $queen > $bulda){
-    $answer = 'Queen Iduna'; 
+    $answer = 'Queen_Iduna'; 
     }else{
     $answer = "Bulda";
     }
@@ -139,7 +139,7 @@ switch($answer){
     case 'Elsa':
         $ecount += 1;
         break;
-    case 'Queen Iduna':
+    case 'Queen_Iduna':
         $qcount += 1;
         break;
     case 'Bulda':
@@ -202,16 +202,27 @@ fclose($myfile);
      </header>
           <main>   
               <p><?php echo $name?>, you are most like <?php echo $answer?>!</p>
-                                    
-      <?php echo $kcount ?> users are like Kristoff.<br>
-      <?php echo $olcount?> users are like Olaf.<br>
-      <?php echo $hans ?> users are like Hans.<br>
-      <?php echo $oacount ?> users are like Oaken.<br>
-      <?php echo $acount ?> users are like Anna.<br>
-      <?php echo $ecount ?> users are like Elsa.<br>
-      <?php echo $qcount ?> users are like Queen Irunda.<br>
-      <?php echo $bcount ?> users are Bulda.<br>
+              <img src="<?php echo $answer . 'jpg'; ?>" alt='Frozen characters' class='frozen'>
       
+              <div id='results'>
+      <img src='Kristoff.jpeg' alt='Kristoff' class='frozen'>
+      <?php echo $kcount ?> users are like Kristoff.<br>
+      <img src='Olaf.jpeg' alt='Olaf' class='frozen'>
+      <?php echo $olcount?> users are like Olaf.<br>
+      <img src='Hans.jpeg' alt='Hans' class='frozen'>
+      <?php echo $hans ?> users are like Hans.<br>
+      <img src='Oaken.jpeg' alt='Oaken' class='frozen'>
+      <?php echo $oacount ?> users are like Oaken.<br>
+      <img src='Anna.jpeg' alt='Anna' class='frozen'>
+      <?php echo $acount ?> users are like Anna.<br>
+      <img src='Elsa.jpeg' alt='Elsa' class='frozen'>
+      <?php echo $ecount ?> users are like Elsa.<br>
+      <img src='Queen_Iduna.jpeg' alt='Queen Iduna' class='frozen'>
+      <?php echo $qcount ?> users are like Queen Irunda.<br>
+      <img src='Bulda.jpeg' alt='Bulda' class='frozen'>
+      <?php echo $bcount ?> users are Bulda.<br>
+
+              </div>
         </main>
     <footer>
     <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/footer.php'; ?>
