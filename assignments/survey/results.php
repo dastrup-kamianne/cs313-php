@@ -48,9 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     //$gender = test_input($_POST["gender"]);
     if ($gender == 'male'){
         $male = intval($male) + 1;
-        echo 'test male type after conversion ';
-        var_dump($male);
-
+        
     }
     else {
         $female = intval($female) + 1;
@@ -100,9 +98,14 @@ function test_input($data){
 echo 'test male type is ';
 var_dump($male);
 
-$myfilew = fopen('results.txt', 'w') or die('Unable to open file!');
+$myfile = fopen('results.txt', 'w') or die('Unable to open file!');
 
-fwrite($myfilew,$male);
+$text = "Hello, ";
+$cracker = 'crack-a-lackin';
+fwrite($myfile,$text);
+fwrite($myfile,$cracker);
+
+/*fwrite($myfilew,$male);
 fwrite($myfilew,$female);
 fwrite($myfilew,$teen);
 fwrite($myfilew,$twenty);
@@ -110,7 +113,7 @@ fwrite($myfilew,$thirty);
 fwrite($myfilew,$forty);
 fwrite($myfilew,$fifty);
 fwrite($myfilew,$sixty);
-fwrite($myfilew,$old);
+fwrite($myfilew,$old);*/
 
 $text = file_get_contents('results.txt');
 $text = htmlspecialchars($text);
