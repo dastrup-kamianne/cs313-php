@@ -209,7 +209,7 @@ q{
 .resume li{
     list-style-type: none;
 }
-#frozen{
+.frozen{
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -218,6 +218,7 @@ q{
 #results p{
  text-align: center;   
 }
+
 
 /*Import for mobile phones*/
 @media only screen and (max-device-width: 767px) and (orientation: portrait),
