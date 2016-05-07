@@ -217,7 +217,7 @@ fclose($myfile);
       <img src='Elsa.jpeg' alt='Elsa' class='frozen'>
       <?php echo $ecount ?> users are like Elsa.<br>
       <img src='Queen_Iduna.png' alt='Queen Iduna' class='frozen'>
-      <?php echo $qcount ?> users are like Queen Irunda.<br>
+      <?php echo $qcount ?> users are like Queen Iduna.<br>
       <img src='Bulda.jpg' alt='Bulda' class='frozen'>
       <?php echo $bcount ?> users are Bulda.<br>
 
