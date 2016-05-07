@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
   } else {
     $gender = test_input($_POST["gender"]);
     if ($gender == 'male'){
-        $male += 1;    
+        $male += 1;
     }
     else {
         $female = intval($female) + 1;
@@ -99,21 +99,49 @@ var_dump($male);*/
 
 $myfile = fopen('results.txt', 'w') or die('Unable to open file!');
 
+/*function writeResults($count){
+    if($count == 0){
+        fwrite($myfile,$count);
+    }else{
+        fwrite($myfile,$count . "\n");
+    }
+}*/
 if ($male == 0){
     fwrite($myfile,$male);
 }else{
     fwrite($myfile,$male . "\n");}
-if ($female = 0){
+if ($female == 0){
     fwrite($myfile,$female);
 }else{
     fwrite($myfile,$female . "\n");}
-fwrite($myfile,$teen . "\n");
-fwrite($myfile,$twenty . "\n");
-fwrite($myfile,$thirty . "\n");
-fwrite($myfile,$forty . "\n");
-fwrite($myfile,$fifty . "\n");
-fwrite($myfile,$sixty . "\n");
-fwrite($myfile,$old . "\n");
+if ($teen == 0){
+    fwrite($myfile,$teen);
+}else{
+    fwrite($myfile,$teen . "\n");}
+if ($twenty == 0){
+    fwrite($myfile,$twenty);
+}else{
+    fwrite($myfile,$twenty . "\n");}
+if ($thirty == 0){
+    fwrite($myfile,$thirty);
+}else{
+    fwrite($myfile,$thirty . "\n");}
+if ($forty == 0){
+    fwrite($myfile,$forty);
+}else{
+    fwrite($myfile,$forty . "\n");}
+if ($fifty == 0){
+    fwrite($myfile,$fifty);
+}else{
+    fwrite($myfile,$fifty . "\n");}
+if ($sixy == 0){
+    fwrite($myfile,$sixy);
+}else{
+    fwrite($myfile,$sixty . "\n");}
+if ($old == 0){
+    fwrite($myfile,$old);
+}else{
+    fwrite($myfile,$old . "\n");}
 
 /*$text = file_get_contents('results.txt');
 $text = htmlspecialchars($text);
