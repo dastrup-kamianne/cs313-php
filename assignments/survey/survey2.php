@@ -28,7 +28,7 @@
       <form action="results.php" method="post" id="survey_form">
           <input type="hidden" name="action" value="show_results">
               <input type="hidden" name="name" value="<?php echo $name ?>">
-              <input type="hidden" name="name" value="<?php echo $gender ?>">
+              <input type="hidden" name="gender" value="<?php echo $gender ?>">
               
               <label>What is your favorite food?</label><br>
                     <input type="radio" name="food" value="kristoff">Carrots<br>
@@ -61,7 +61,7 @@
       <form action="results.php" method="post" id="survey_form">
           <input type="hidden" name="action" value="show_results">
               <input type="hidden" name="name" value="<?php echo $name ?>">
-              <input type="hidden" name="name" value="<?php echo $gender ?>">
+              <input type="hidden" name="gender" value="<?php echo $gender ?>">
               
               <label>What is your favorite food?</label><br>
                     <input type="radio" name="food" value="anna">Sandwiches<br>
