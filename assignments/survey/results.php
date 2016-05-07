@@ -75,8 +75,6 @@ function test_input($data){
     $data = htmlspecialchars($data);
     return $data;
 }
-echo $name . $gender . $food . $hair . $activity;
-echo 'Anna' . $anna . 'Elsa' . $elsa . 'Queen' . $queen . 'Bulda' . $bulda;
 
 $kristoff = intval($kristoff);
 $olaf = intval($olaf);
@@ -113,9 +111,7 @@ elseif ($gender == 'female'){
     echo 'gtb';
     }
 }
-echo $anna . $elsa . $queen . $bulda;
-echo 'answer is ' . $answer;
-var_dump($anna);
+
 
 $myfile = fopen('results.txt', 'r') or die('Unable to open file!');
 $kcount = fgets($myfile);
@@ -161,14 +157,14 @@ switch($answer){
 
 $myfile = fopen('results.txt', 'w') or die('Unable to open file!');
 
-fwrite($myfile,$kcount);
-fwrite($myfile,$olcount);
-fwrite($myfile,$hcount);
-fwrite($myfile,$oacount);
-fwrite($myfile,$acount);
-fwrite($myfile,$ecount);
-fwrite($myfile,$qcount);
-fwrite($myfile,$bcount);
+fwrite($myfile,$kcount."\n");
+fwrite($myfile,$olcount."\n");
+fwrite($myfile,$hcount."\n");
+fwrite($myfile,$oacount."\n");
+fwrite($myfile,$acount."\n");
+fwrite($myfile,$ecount."\n");
+fwrite($myfile,$qcount."\n");
+fwrite($myfile,$bcount."\n");
 
 fclose($myfile);
 
