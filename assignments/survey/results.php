@@ -119,7 +119,16 @@ $qcount1 = fgets($myfile);
 $bcount1 = fgets($myfile);
 fclose($myfile);
 
-echo "Anna" . $acount1 . " Elsa" . $ecount1;
+$myfile = fopen('results.txt', 'r') or die('Unable to open file!');
+$kcount = fgets($myfile);
+$olcount = fgets($myfile);
+$hcount = fgets($myfile);
+$oacount = fgets($myfile);
+$acount = fgets($myfile);
+$ecount = fgets($myfile);
+$qcount = fgets($myfile);
+$bcount = fgets($myfile);
+fclose($myfile);
 
 switch($answer){
     case 'Kristoff':
@@ -147,8 +156,6 @@ switch($answer){
         $bcount = $bcount1 + 1;
         break;
 }        
-        
-echo "Anna" . $acount1 . " Elsa" . $ecount1;
 
 
 $myfile = fopen('results.txt', 'w') or die('Unable to open file!');
@@ -205,18 +212,7 @@ fclose($myfile);
               <p><?php echo $name?>, you are most like <?php echo $answer?>!</p>
       
               <div id='results'>
-<?php 
-$myfile = fopen('results.txt', 'r') or die('Unable to open file!');
-$kcount = fgets($myfile);
-$olcount = fgets($myfile);
-$hcount = fgets($myfile);
-$oacount = fgets($myfile);
-$acount = fgets($myfile);
-$ecount = fgets($myfile);
-$qcount = fgets($myfile);
-$bcount = fgets($myfile);
-fclose($myfile);
-?>
+
       <img src='Kristoff.jpeg' alt='Kristoff' class='frozen'>
       <?php echo $kcount ?> users are like Kristoff.<br><br>
       <img src='Olaf.jpeg' alt='Olaf' class='frozen'>
