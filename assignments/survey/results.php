@@ -7,11 +7,11 @@
      <?php
      
 $kristoff = $olaf = $hans = $oaken = $anna = $elsa = $bulda = $queen = 0;
-$name = test_input($_POST["name"]);
-$gender = test_input($_POST["gender"]);
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+ $name = test_input($_POST["name"]);
+ $gender = test_input($_POST["gender"]);
  $food = test_input($_POST["food"]);
   if ($food == 'kristoff'){
       $kristoff += 1;
@@ -97,15 +97,22 @@ if ($gender == 'male'){
     $answer == 'Oaken';}
 }
 elseif ($gender == 'female'){
+    echo 'female';
     if($anna >= $elsa && $anna >= $queen && $anna >= $bulda){
     $answer == 'Anna';
+    echo 'gta';
     }elseif($elsa > $anna && $elsa > $queen && $elsa > $bulda){
     $answer == 'Elsa';
+    echo 'gte';
     }elseif($queen > $anna && $queen > $elsa && $queen > $bulda){
-    $answer == 'Queen Iduna';   
+    $answer == 'Queen Iduna'; 
+    echo 'gtq';
     }else{
-    $answer == "Bulda";}
+    $answer == "Bulda";
+    echo 'gtb';
+    }
 }
+echo $anna . $elsa . $queen . $bulda;
 echo 'answer is ' . $answer;
 var_dump($anna);
 
