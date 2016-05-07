@@ -157,14 +157,14 @@ switch($answer){
 
 $myfile = fopen('results.txt', 'w') or die('Unable to open file!');
 
-fwrite($myfile,$kcount."\n");
-fwrite($myfile,$olcount."\n");
-fwrite($myfile,$hcount."\n");
-fwrite($myfile,$oacount."\n");
-fwrite($myfile,$acount."\n");
-fwrite($myfile,$ecount."\n");
-fwrite($myfile,$qcount."\n");
-fwrite($myfile,$bcount."\n");
+fwrite($myfile,$kcount."\r\n");
+fwrite($myfile,$olcount."\r\n");
+fwrite($myfile,$hcount."\r\n");
+fwrite($myfile,$oacount."\r\n");
+fwrite($myfile,$acount."\r\n");
+fwrite($myfile,$ecount."\r\n");
+fwrite($myfile,$qcount."\r\n");
+fwrite($myfile,$bcount."\r\n");
 
 fclose($myfile);
 
