@@ -99,8 +99,14 @@ var_dump($male);*/
 
 $myfile = fopen('results.txt', 'w') or die('Unable to open file!');
 
-fwrite($myfile,$male . "\n");
-fwrite($myfile,$female . "\n");
+if ($male == 0){
+    fwrite($myfile,$male);
+}else{
+    fwrite($myfile,$male . "\n");}
+if ($female = 0){
+    fwrite($myfile,$female);
+}else{
+    fwrite($myfile,$female . "\n");}
 fwrite($myfile,$teen . "\n");
 fwrite($myfile,$twenty . "\n");
 fwrite($myfile,$thirty . "\n");
