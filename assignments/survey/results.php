@@ -7,6 +7,7 @@
      <?php
      
 $kristoff = $olaf = $hans = $oaken = $anna = $elsa = $bulda = $queen = 0;
+$answer = '';
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
