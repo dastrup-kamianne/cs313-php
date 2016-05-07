@@ -109,11 +109,11 @@ $myfile = fopen('results.txt', 'w') or die('Unable to open file!');
 if ($male == 0){
     fwrite($myfile,$male);
 }else{
-    fwrite($myfile,$male . "\r\n");
+fwrite($myfile,$male . "\r\n");}
 if ($female == 0){
     fwrite($myfile,$female);
 }else{
-    fwrite($myfile,$female . "\r\n");
+fwrite($myfile,$female . "\r\n");}
 if ($teen == 0){
     fwrite($myfile,$teen);
 }else{
