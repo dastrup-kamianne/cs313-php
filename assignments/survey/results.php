@@ -106,13 +106,13 @@ $myfile = fopen('results.txt', 'w') or die('Unable to open file!');
         fwrite($myfile,$count . "\n");
     }
 }*/
-//if ($male == 0){
-//    fwrite($myfile,$male);
-//}else{
+if ($male == 0){
+    fwrite($myfile,$male);
+}else{
     fwrite($myfile,$male . "\r\n");
-//if ($female == 0){
-//    fwrite($myfile,$female);
-//}else{
+if ($female == 0){
+    fwrite($myfile,$female);
+}else{
     fwrite($myfile,$female . "\r\n");
 if ($teen == 0){
     fwrite($myfile,$teen);
