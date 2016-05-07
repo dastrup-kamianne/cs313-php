@@ -209,6 +209,7 @@ q{
 .resume li{
     list-style-type: none;
 }
+
 .frozen{
     display: block;
     margin-left: auto;
