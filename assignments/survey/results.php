@@ -200,7 +200,7 @@ fclose($myfile);
 
 $cookie_name = $name;
 $cookie_value = $answer;
-setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/", '.php-kdastrup.rhcloud.com');
 ?>
 
 <!DOCTYPE html> 
