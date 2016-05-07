@@ -52,8 +52,8 @@
           <input type="submit" value="Next">
           </form>
           
-      </div>
-              <a href='results.php' id='resultlink'>Click here to go to the results</a><br>
+      <div class='resultlink'>
+                  <a href='results.php'>Click here to go to the results</a></div>
       <?php ;}
       if (($_POST["gender"]) == 'female'){ ?>
       
@@ -85,8 +85,8 @@
           <input type="submit" value="Next">
           </form>
           
-      </div>
-              <a href='results.php'>Click here to go to the results</a><br>
+      <div class='resultlink'>
+                  <a href='results.php'>Click here to go to the results</a></div>
       
       <?php    ;} ;} ?>
             
