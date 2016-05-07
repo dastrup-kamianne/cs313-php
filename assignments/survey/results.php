@@ -189,7 +189,7 @@ if($bcount == 0){
     fwrite($myfile,$bcount);
 }else{
 fwrite($myfile,$bcount."\r\n");
-
+}
 fclose($myfile);
 
 ?>
