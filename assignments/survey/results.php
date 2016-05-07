@@ -89,27 +89,27 @@ $bulda = intval($bulda);
 
 if ($gender == 'male'){
     if($kristoff >= $olaf && $kristoff >= $hans && $kristoff >= $oaken){
-    $answer == 'Kristoff';
+    $answer = 'Kristoff';
     }elseif($olaf > $kristoff && $olaf > $hans && $olaf > $oaken){
-    $answer == 'Olaf';
+    $answer = 'Olaf';
     }elseif($hans > $kristoff && $hans > $olaf && $hans > $oaken){
-    $answer == 'Hans';
+    $answer = 'Hans';
     }else{
-    $answer == 'Oaken';}
+    $answer = 'Oaken';}
 }
 elseif ($gender == 'female'){
     echo 'female';
     if($anna >= $elsa && $anna >= $queen && $anna >= $bulda){
-    $answer == 'Anna';
+    $answer = 'Anna';
     echo $answer;
     }elseif($elsa > $anna && $elsa > $queen && $elsa > $bulda){
-    $answer == 'Elsa';
+    $answer = 'Elsa';
     echo 'gte';
     }elseif($queen > $anna && $queen > $elsa && $queen > $bulda){
-    $answer == 'Queen Iduna'; 
+    $answer = 'Queen Iduna'; 
     echo 'gtq';
     }else{
-    $answer == "Bulda";
+    $answer = "Bulda";
     echo 'gtb';
     }
 }
