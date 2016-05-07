@@ -198,6 +198,7 @@ fwrite($myfile,$bcount."\r\n");}
 
 fclose($myfile);
 
+$_SESSION['set'] = 'set';
 $_SESSION['name'] = $name;
 $_SESSION['answer'] = $answer;
 
@@ -216,7 +217,7 @@ $_SESSION['answer'] = $answer;
      </header>
           <main>
             <?php
-            if (isset($_SESSION['name'])){ ?>
+            if (isset($_SESSION['set'])){ ?>
                 <p><?php echo $_SESSION['name']; ?>, you are most like <?php echo $_SESSION['answer']; ?>!</p>
             <?php ;} ?>    
                 

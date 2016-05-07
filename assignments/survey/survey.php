@@ -14,8 +14,8 @@ session_start(); ?>
          <h1>Which Frozen Character Are You?</h1>
      </header>
      <?php
-     if (!isset($_SESSION['name'])){ 
-         echo 'is not set';?>
+     if (!isset($_SESSION['set'])){ 
+         ?>
       <p>
           Take the quiz below to find out which Frozen character you are.
       </p><br>
@@ -35,7 +35,7 @@ session_start(); ?>
               <a href='results.php'>Click here to go to the results</a><br>
      <?php ;}
      else {
-         echo 'is set';?>
+         ?>
               <p>You have already taken this quiz.</p><br>
               <a href='results.php'>Click here to go to the results</a><br>
      <?php ;} ?>
