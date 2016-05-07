@@ -13,6 +13,7 @@ $answer = '';
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
  $name = test_input($_POST["name"]);
  $gender = test_input($_POST["gender"]);
+ 
  $food = test_input($_POST["food"]);
   if ($food == 'kristoff'){
       $kristoff += 1;
@@ -202,6 +203,9 @@ fwrite($myfile,$bcount."\r\n");}
 
 fclose($myfile);
 
+$cookie_name = $name;
+$cookie_value = $answer;
+setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
 ?>
       <div class="wrapper">
      <header>
@@ -209,10 +213,14 @@ fclose($myfile);
          <h1>Results</h1>
      </header>
           <main>
-              <?php if ($_SERVER['REQUEST_METHOD'] == 'POST'){ ?>
-              <p><?php echo $name?>, you are most like <?php echo $answer?>!</p>
-              <?php ;} ?>
-      
+            <?php if ($_SERVER['REQUEST_METHOD'] == 'POST'){ 
+              if (!isset($_COOKIE[$cookie_name])){ ?>
+                <p><?php echo $name?>, you are most like <?php echo $answer?>!</p>
+            <?php ;} 
+              else {?>
+                <p><?php echo $cookie_name?>, you are most like <?php echo $cookie_value?>!</p>
+            <?php ;} ;} ?>    
+                
               <div id='results'>
 
       <img src='Kristoff.jpeg' alt='Kristoff' class='frozen'>
