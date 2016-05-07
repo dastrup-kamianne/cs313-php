@@ -100,7 +100,7 @@ elseif ($gender == 'female'){
     echo 'female';
     if($anna >= $elsa && $anna >= $queen && $anna >= $bulda){
     $answer == 'Anna';
-    echo 'gta';
+    echo $answer;
     }elseif($elsa > $anna && $elsa > $queen && $elsa > $bulda){
     $answer == 'Elsa';
     echo 'gte';
