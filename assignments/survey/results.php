@@ -1,5 +1,5 @@
-
-     <?php
+<?php
+session_start();
      
 $kristoff = $olaf = $hans = $oaken = $anna = $elsa = $bulda = $queen = 0;
 $answer = '';
@@ -198,9 +198,9 @@ fwrite($myfile,$bcount."\r\n");}
 
 fclose($myfile);
 
-$cookie_name = $name;
-$cookie_value = $answer;
-setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/", '.php-kdastrup.rhcloud.com');
+$_SESSION['name'] = $name;
+$_SESSION['answer'] = $answer;
+
 ?>
 
 <!DOCTYPE html> 
@@ -216,8 +216,8 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/", '.php-kdastru
      </header>
           <main>
             <?php
-            if (isset($_COOKIE[$cookie_name])){ ?>
-                <p><?php echo $cookie_name?>, you are most like <?php echo $cookie_value?>!</p>
+            if (isset($_SESSION['name'])){ ?>
+                <p><?php echo $_SESSION['name']; ?>, you are most like <?php echo $_SESSION['answer']; ?>!</p>
             <?php ;} ?>    
                 
               <div id='results'>
@@ -242,11 +242,7 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/", '.php-kdastru
               </div>
         </main>
           
-          <?php if(!isset($_COOKIE[$cookie_name])){
-          echo 'is not set';}
-          else {
-              echo "is set";
-          } ?>
+          
     <footer>
     <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/footer.php'; ?>
     </footer>
