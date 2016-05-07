@@ -222,13 +222,13 @@ q{
 #survey_form{
     padding-left: 100px;
 }
-#resultlink{
+.resultlink a{
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
 }
-#resultlink :hover{
+.resultlink a:hover{
     background-color: white;
     color: #f9b72b
 }
