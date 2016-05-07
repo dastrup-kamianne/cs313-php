@@ -79,6 +79,15 @@ function test_input($data){
 echo $name . $gender . $food . $hair . $activity;
 echo 'Anna' . $anna . 'Elsa' . $elsa . 'Queen' . $queen . 'Bulda' . $bulda;
 
+$kristoff = intval($kristoff);
+$olaf = intval($olaf);
+$hans = intval($hans);
+$oaken = intval($oaken);
+$anna = intval($anna);
+$elsa = intval($elsa);
+$queen = intval($queen);
+$bulda = intval($bulda);
+
 if ($gender == 'male'){
     if($kristoff >= $olaf && $kristoff >= $hans && $kristoff >= $oaken){
     $answer == 'Kristoff';
