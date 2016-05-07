@@ -109,39 +109,39 @@ $myfile = fopen('results.txt', 'w') or die('Unable to open file!');
 if ($male == 0){
     fwrite($myfile,$male);
 }else{
-    fwrite($myfile,$male . "\n");}
+    fwrite($myfile,$male . "\r\n");}
 if ($female == 0){
     fwrite($myfile,$female);
 }else{
-    fwrite($myfile,$female . "\n");}
+    fwrite($myfile,$female . "\r\n");}
 if ($teen == 0){
     fwrite($myfile,$teen);
 }else{
-    fwrite($myfile,$teen . "\n");}
+    fwrite($myfile,$teen . "\r\n");}
 if ($twenty == 0){
     fwrite($myfile,$twenty);
 }else{
-    fwrite($myfile,$twenty . "\n");}
+    fwrite($myfile,$twenty . "\r\n");}
 if ($thirty == 0){
     fwrite($myfile,$thirty);
 }else{
-    fwrite($myfile,$thirty . "\n");}
+    fwrite($myfile,$thirty . "\r\n");}
 if ($forty == 0){
     fwrite($myfile,$forty);
 }else{
-    fwrite($myfile,$forty . "\n");}
+    fwrite($myfile,$forty . "\r\n");}
 if ($fifty == 0){
     fwrite($myfile,$fifty);
 }else{
-    fwrite($myfile,$fifty . "\n");}
+    fwrite($myfile,$fifty . "\r\n");}
 if ($sixy == 0){
     fwrite($myfile,$sixy);
 }else{
-    fwrite($myfile,$sixty . "\n");}
+    fwrite($myfile,$sixty . "\r\n");}
 if ($old == 0){
     fwrite($myfile,$old);
 }else{
-    fwrite($myfile,$old . "\n");}
+    fwrite($myfile,$old . "\r\n");}
 
 /*$text = file_get_contents('results.txt');
 $text = htmlspecialchars($text);
