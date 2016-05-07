@@ -100,7 +100,7 @@ var_dump($male);
 
 $myfile = fopen('results.txt', 'w') or die('Unable to open file!');
 
-$text = "Hello, " . \n;
+$text = "Hello,\n ";
 $cracker = 'crack-a-lackin';
 fwrite($myfile,$text);
 fwrite($myfile,$cracker);
