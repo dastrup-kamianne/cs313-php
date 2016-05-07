@@ -109,41 +109,41 @@ elseif ($gender == 'female'){
 
 
 $myfile = fopen('results.txt', 'r') or die('Unable to open file!');
-$kcount = fgets($myfile);
-$olcount = fgets($myfile);
-$hcount = fgets($myfile);
-$oacount = fgets($myfile);
-$acount = fgets($myfile);
-$ecount = fgets($myfile);
-$qcount = fgets($myfile);
-$bcount = fgets($myfile);
+$kcount1 = fgets($myfile);
+$olcount1 = fgets($myfile);
+$hcount1 = fgets($myfile);
+$oacount1 = fgets($myfile);
+$acount1 = fgets($myfile);
+$ecount1 = fgets($myfile);
+$qcount1 = fgets($myfile);
+$bcount1 = fgets($myfile);
 fclose($myfile);
 
 
 switch($answer){
     case 'Kristoff':
-        $kcount += 1;
+        $kcount = $kcount1 + 1;
         break;
     case 'Olaf':
-        $olcount += 1;
+        $olcount = $olcount1 + 1;
         break;
     case 'Hans':
-        $hcount += 1;
+        $hcount = $hcount1 + 1;
         break;
     case 'Oaken':
-        $oacount += 1;
+        $oacount = $oacount1 + 1;
         break;
     case 'Anna':
-        $acount += 1;
+        $acount = $acount1 + 1;
         break;
     case 'Elsa':
-        $ecount += 1;
+        $ecount = $ecount1 + 1;
         break;
     case 'Queen_Iduna':
-        $qcount += 1;
+        $qcount = $qcount1 + 1;
         break;
     case 'Bulda':
-        $bcount += 1;
+        $bcount = $bcount1 + 1;
         break;
 }        
         
@@ -152,42 +152,42 @@ switch($answer){
 
 $myfile = fopen('results.txt', 'w') or die('Unable to open file!');
 
-if($kcount == 0){
+if($kcount == $kcount1){
     fwrite($myfile,$kcount);
 }else{
 fwrite($myfile,$kcount."\r\n");}
 
-if($olcount == 0){
+if($olcount == $olcount1){
     fwrite($myfile,$olcount);
 }else{
 fwrite($myfile,$olcount."\r\n");}
 
-if($hcount == 0){
+if($hcount == $hcount1){
     fwrite($myfile,$hcount);
 }else{
 fwrite($myfile,$hcount."\r\n");}
 
-if($oacount == 0){
+if($oacount == $oacount1){
     fwrite($myfile,$oacount);
 }else{
 fwrite($myfile,$oacount."\r\n");}
 
-if($acount == 0){
+if($acount == $acount1){
     fwrite($myfile,$acount);
 }else{
 fwrite($myfile,$acount."\r\n");}
 
-if($ecount == 0){
+if($ecount == $ecount1){
     fwrite($myfile,$ecount);
 }else{
 fwrite($myfile,$ecount."\r\n");}
 
-if($qcount == 0){
+if($qcount == $qcount1){
     fwrite($myfile,$qcount);
 }else{
 fwrite($myfile,$qcount."\r\n");}
 
-if($bcount == 0){
+if($bcount == $bcount1){
     fwrite($myfile,$bcount);
 }else{
 fwrite($myfile,$bcount."\r\n");}
