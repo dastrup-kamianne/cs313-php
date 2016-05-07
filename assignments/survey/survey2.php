@@ -53,7 +53,7 @@
           </form>
           
       </div>
-              <a href='results.php'>Click here to go to the results</a><br>
+              <a href='results.php' id='resultlink'>Click here to go to the results</a><br>
       <?php ;}
       if (($_POST["gender"]) == 'female'){ ?>
       

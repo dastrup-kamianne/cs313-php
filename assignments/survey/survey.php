@@ -37,7 +37,7 @@ session_start(); ?>
      else {
          ?>
               <p>You have already taken this quiz.</p><br>
-              <a href='results.php'>Click here to go to the results</a><br>
+              <a href='results.php' id="resultlink">Click here to go to the results</a><br>
      <?php ;} ?>
     <footer>
     <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/footer.php'; ?>
