@@ -77,6 +77,7 @@ function test_input($data){
     return $data;
 }
 echo $name . $gender . $food . $hair . $activity;
+echo 'Anna' . $anna . 'Elsa' . $elsa . 'Queen' . $queen . 'Bulda' . $bulda;
 
 if ($gender == 'male'){
     if($kristoff >= $olaf && $kristoff >= $hans && $kristoff >= $oaken){
