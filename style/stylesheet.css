@@ -219,6 +219,14 @@ q{
 #results{
  text-align: center;   
 }
+#survey_form{
+    padding-left: 100px;
+}
+#surveylink{
+    display: block;
+    align: center;
+    padding-bottom: 10px;
+}
 
 
 /*Import for mobile phones*/
