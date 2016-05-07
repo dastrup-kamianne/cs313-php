@@ -155,42 +155,42 @@ $myfile = fopen('results.txt', 'w') or die('Unable to open file!');
 if($kcount == 0){
     fwrite($myfile,$kcount);
 }else{
-fwrite($myfile,$kcount."\r\n");}
+fwrite($myfile,$kcount."\n\r");}
 
 if($olcount == 0){
     fwrite($myfile,$olcount);
 }else{
-fwrite($myfile,$olcount."\r\n");}
+fwrite($myfile,$olcount."\n\r");}
 
 if($hcount == 0){
     fwrite($myfile,$hcount);
 }else{
-fwrite($myfile,$hcount."\r\n");}
+fwrite($myfile,$hcount."\n\r");}
 
 if($oacount == 0){
     fwrite($myfile,$oacount);
 }else{
-fwrite($myfile,$oacount."\r\n");}
+fwrite($myfile,$oacount."\n\r");}
 
 if($acount == 0){
     fwrite($myfile,$acount);
 }else{
-fwrite($myfile,$acount."\r\n");}
+fwrite($myfile,$acount."\n\r");}
 
 if($ecount == 0){
     fwrite($myfile,$ecount);
 }else{
-fwrite($myfile,$ecount."\r\n");}
+fwrite($myfile,$ecount."\n\r");}
 
 if($qcount == 0){
     fwrite($myfile,$qcount);
 }else{
-fwrite($myfile,$qcount."\r\n");}
+fwrite($myfile,$qcount."\n\r");}
 
 if($bcount == 0){
     fwrite($myfile,$bcount);
 }else{
-fwrite($myfile,$bcount."\r\n");}
+fwrite($myfile,$bcount."\n\r");}
 
 fclose($myfile);
 
