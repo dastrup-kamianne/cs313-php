@@ -213,8 +213,7 @@ q{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height:50%;
-    width:50%;
+    height:150px;
 }
 #results p{
  text-align: center;   
