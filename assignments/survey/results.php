@@ -76,25 +76,26 @@ function test_input($data){
     $data = htmlspecialchars($data);
     return $data;
 }
+echo $name . $gender . $food . $hair . $activity;
 
 if ($gender == 'male'){
-if($kristoff >= $olaf && $kristoff >= $hans && $kristoff >= $oaken){
+    if($kristoff >= $olaf && $kristoff >= $hans && $kristoff >= $oaken){
     $answer == 'Kristoff';
-}elseif($olaf > $kristoff && $olaf > $hans && $olaf > $oaken){
+    }elseif($olaf > $kristoff && $olaf > $hans && $olaf > $oaken){
     $answer == 'Olaf';
-}elseif($hans > $kristoff && $hans > $olaf && $hans > $oaken){
+    }elseif($hans > $kristoff && $hans > $olaf && $hans > $oaken){
     $answer == 'Hans';
-}else{
+    }else{
     $answer == 'Oaken';}
 }
 elseif ($gender == 'female'){
-if($anna >= $elsa && $anna >= $queen && $anna >= $bulda){
+    if($anna >= $elsa && $anna >= $queen && $anna >= $bulda){
     $answer == 'Anna';
-}elseif($elsa > $anna && $elsa > $queen && $elsa > $bulda){
+    }elseif($elsa > $anna && $elsa > $queen && $elsa > $bulda){
     $answer == 'Elsa';
-}elseif($queen > $anna && $queen > $elsa && $queen > $bulda){
+    }elseif($queen > $anna && $queen > $elsa && $queen > $bulda){
     $answer == 'Queen Iduna';   
-}else{
+    }else{
     $answer == "Bulda";}
 }
 
@@ -142,38 +143,14 @@ switch($answer){
 
 $myfile = fopen('results.txt', 'w') or die('Unable to open file!');
 
-if ($kcount == 0){
-    fwrite($myfile,$kcount);
-}else{
-fwrite($myfile,$kcount . "\r\n");}
-if ($olcount == 0){
-    fwrite($myfile,$olcount);
-}else{
-fwrite($myfile,$olcount . "\r\n");}
-if ($hcount == 0){
-    fwrite($myfile,$hcount);
-}else{
-    fwrite($myfile,$hcount . "\r\n");}
-if ($oacount == 0){
-    fwrite($myfile,$oacount);
-}else{
-    fwrite($myfile,$oacount . "\r\n");}
-if ($acount == 0){
-    fwrite($myfile,$acount);
-}else{
-    fwrite($myfile,$acount . "\r\n");}
-if ($ecount == 0){
-    fwrite($myfile,$ecount);
-}else{
-    fwrite($myfile,$ecount . "\r\n");}
-if ($qcount == 0){
-    fwrite($myfile,$qcount);
-}else{
-    fwrite($myfile,$qcount . "\r\n");}
-if ($bcount == 0){
-    fwrite($myfile,$bcount);
-}else{
-    fwrite($myfile,$bcount . "\r\n");}
+fwrite($myfile,$kcount);
+fwrite($myfile,$olcount);
+fwrite($myfile,$hcount);
+fwrite($myfile,$oacount);
+fwrite($myfile,$acount);
+fwrite($myfile,$ecount);
+fwrite($myfile,$qcount);
+fwrite($myfile,$bcount);
 
 fclose($myfile);
 
@@ -184,25 +161,17 @@ fclose($myfile);
          <h1>Results</h1>
      </header>
           <main>   
-              <p>Thank you, <?php echo $name?>!<br>
-                  <?php echo $gender . ' is gender.';
-                        echo $age . ' is age.';
-                        echo $education . ' is education.'; ?><br>
-                  
-      <?php echo $male ?> users are male.<br>
-      <?php echo $female?> users are female.<br>
-      <?php echo $teen ?> users are 0-19.<br>
-      <?php echo $twenty ?> users are 20-29.<br>
-      <?php echo $thirty ?> users are 30-39.<br>
-      <?php echo $forty ?> users are 40-49.<br>
-      <?php echo $fifty ?> users are 50-59.<br>
-      <?php echo $sixty ?> users are 60-69.<br>
-      <?php echo $old ?> users are 70+.<br>
-      <?php echo $hs?> users have graduated High School.<br>
-      <?php echo $ad?> users have Associates Degrees.<br>
-      <?php echo $bd?> users have Bachelors Degrees.<br>
-      <?php echo $md?> users have Masters Degrees.<br>
-      <?php echo $phd?> users have a PhD.</p>
+              <p><?php echo $name?>, you are most like <?php echo $answer?>!</p>
+                                    
+      <?php echo $kcount ?> users are like Kristoff.<br>
+      <?php echo $olcount?> users are like Olaf.<br>
+      <?php echo $hans ?> users are like Hans.<br>
+      <?php echo $oacount ?> users are like Oaken.<br>
+      <?php echo $acount ?> users are like Anna.<br>
+      <?php echo $ecount ?> users are like Elsa.<br>
+      <?php echo $qcount ?> users are like Queen Irunda.<br>
+      <?php echo $bcount ?> users are Bulda.<br>
+      
         </main>
     <footer>
     <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/footer.php'; ?>
