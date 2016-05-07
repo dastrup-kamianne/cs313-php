@@ -96,19 +96,14 @@ if ($gender == 'male'){
     $answer = 'Oaken';}
 }
 elseif ($gender == 'female'){
-    echo 'female';
     if($anna >= $elsa && $anna >= $queen && $anna >= $bulda){
     $answer = 'Anna';
-    echo $answer;
     }elseif($elsa > $anna && $elsa > $queen && $elsa > $bulda){
     $answer = 'Elsa';
-    echo 'gte';
     }elseif($queen > $anna && $queen > $elsa && $queen > $bulda){
     $answer = 'Queen Iduna'; 
-    echo 'gtq';
     }else{
     $answer = "Bulda";
-    echo 'gtb';
     }
 }
 
@@ -158,42 +153,42 @@ switch($answer){
 $myfile = fopen('results.txt', 'w') or die('Unable to open file!');
 
 if($kcount == 0){
-    fwrite($myfile,'$kcount');
+    fwrite($myfile,$kcount);
 }else{
 fwrite($myfile,$kcount."\r\n");}
 
 if($olcount == 0){
-    fwrite($myfile,'$olcount');
+    fwrite($myfile,$olcount);
 }else{
 fwrite($myfile,$olcount."\r\n");}
 
 if($hcount == 0){
-    fwrite($myfile,'$hcount');
+    fwrite($myfile,$hcount);
 }else{
 fwrite($myfile,$hcount."\r\n");}
 
 if($oacount == 0){
-    fwrite($myfile,'$oacount');
+    fwrite($myfile,$oacount);
 }else{
 fwrite($myfile,$oacount."\r\n");}
 
 if($acount == 0){
-    fwrite($myfile,'$acount');
+    fwrite($myfile,$acount);
 }else{
 fwrite($myfile,$acount."\r\n");}
 
 if($ecount == 0){
-    fwrite($myfile,'$ecount');
+    fwrite($myfile,$ecount);
 }else{
 fwrite($myfile,$ecount."\r\n");}
 
 if($qcount == 0){
-    fwrite($myfile,'$qcount');
+    fwrite($myfile,$qcount);
 }else{
 fwrite($myfile,$qcount."\r\n");}
 
 if($bcount == 0){
-    fwrite($myfile,'$bcount');
+    fwrite($myfile,$bcount);
 }else{
 fwrite($myfile,$bcount."\r\n");}
 
