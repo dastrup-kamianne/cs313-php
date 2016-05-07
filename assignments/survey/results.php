@@ -99,6 +99,8 @@ elseif ($gender == 'female'){
     }else{
     $answer == "Bulda";}
 }
+echo 'answer is ' . $answer;
+var_dump($anna);
 
 $myfile = fopen('results.txt', 'r') or die('Unable to open file!');
 $kcount = fgets($myfile);
