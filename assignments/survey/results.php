@@ -64,7 +64,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
       $queen += 1;
   }else{
       $bulda += 1;
-  } 
+  }
+  
 }
 function test_input($data){
     $data = trim($data);
@@ -199,9 +200,10 @@ fwrite($myfile,$bcount."\r\n");}
 fclose($myfile);
 
 $_SESSION['set'] = 'set';
-$_SESSION['name'] = $name;
-$_SESSION['answer'] = $answer;
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+$_SESSION['name'] = $name;
+$_SESSION['answer'] = $answer;}
 ?>
 
 <!DOCTYPE html> 
