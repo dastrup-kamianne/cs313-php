@@ -208,8 +208,10 @@ fclose($myfile);
          <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/main-header.php'; ?>
          <h1>Results</h1>
      </header>
-          <main>   
+          <main>
+              <?php if ($_SERVER['REQUEST_METHOD'] == 'POST'){ ?>
               <p><?php echo $name?>, you are most like <?php echo $answer?>!</p>
+              <?php ;} ?>
       
               <div id='results'>
 
