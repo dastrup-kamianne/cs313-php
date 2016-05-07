@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
   } else {
     //$gender = test_input($_POST["gender"]);
     if ($gender == 'male'){
-        $male = intval($male) + 1;
+        $male += 1;
         
     }
     else {
