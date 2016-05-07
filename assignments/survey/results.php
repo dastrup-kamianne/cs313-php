@@ -153,42 +153,42 @@ switch($answer){
 $myfile = fopen('results.txt', 'w') or die('Unable to open file!');
 
 if($kcount == $kcount1){
-    fwrite($myfile,$kcount);
+    fwrite($myfile,$kcount1);
 }else{
 fwrite($myfile,$kcount."\r\n");}
 
 if($olcount == $olcount1){
-    fwrite($myfile,$olcount);
+    fwrite($myfile,$olcount1);
 }else{
 fwrite($myfile,$olcount."\r\n");}
 
 if($hcount == $hcount1){
-    fwrite($myfile,$hcount);
+    fwrite($myfile,$hcount1);
 }else{
 fwrite($myfile,$hcount."\r\n");}
 
 if($oacount == $oacount1){
-    fwrite($myfile,$oacount);
+    fwrite($myfile,$oacount1);
 }else{
 fwrite($myfile,$oacount."\r\n");}
 
 if($acount == $acount1){
-    fwrite($myfile,$acount);
+    fwrite($myfile,$acount1);
 }else{
 fwrite($myfile,$acount."\r\n");}
 
 if($ecount == $ecount1){
-    fwrite($myfile,$ecount);
+    fwrite($myfile,$ecount1);
 }else{
 fwrite($myfile,$ecount."\r\n");}
 
 if($qcount == $qcount1){
-    fwrite($myfile,$qcount);
+    fwrite($myfile,$qcount1);
 }else{
 fwrite($myfile,$qcount."\r\n");}
 
 if($bcount == $bcount1){
-    fwrite($myfile,$bcount);
+    fwrite($myfile,$bcount1);
 }else{
 fwrite($myfile,$bcount."\r\n");}
 
