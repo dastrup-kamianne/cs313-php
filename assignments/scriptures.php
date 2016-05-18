@@ -31,9 +31,9 @@ $statement->closeCursor();
     <h1>Scripture Resources</h1>
     
     <?php foreach ($scriptures as $scripture) {
-        echo $scripture['book'] . " " . $scripture['chapter']
-                . ':' . $scripture['verse'] . ' - ' 
-                . $scripture['content'];
+        echo '<strong>' . $scripture['book'] . " " . $scripture['chapter']
+                . ':' . $scripture['verse'] . '</strong> - ' 
+                . '"' . $scripture['content'] . '"<br>';
     }
     
     ?>
