@@ -27,17 +27,40 @@ $statement->closeCursor();
               
               <table id="patientlist">
                   <tr>
+                  
                   <th>First Name</th>
                   <th>Last Name</th>
-                  <th>Patient Number</th>
+                  <th>&nbsp</th>
                   </tr>
                   
                   
-                    <?php foreach ($patient as $pt) {
-                    echo '<tr><td><a href="details.php">' . $pt['patientNumber'] . '</a></td>' . 
-                        '<td>' . $pt['firstName'] . '</td>' . 
-                            '<td>' . $pt['lastName']. '</td></tr>';
-                    } ?>
+                    <?php foreach ($patient as $pt) : ?>
+            <tr>
+                
+                <td><?php echo $pt['firstName']; ?></td>
+                <td><?php echo $pt['lastName']; ?></td>
+                
+                <td><form action="details.php" method="post">
+                    <input type="hidden" name="patientNumber"
+                           value="<?php echo $pt['patientNumber']; ?>">
+                    <input type="submit" value="View Details">
+                </form></td>
+                <!--<td><form action="." method="post">
+                    <input type="hidden" name="action"
+                           value="show_edit_form">
+                    <input type="hidden" name="recipe_id"
+                           value="insert php">
+                    <input type="submit" value="Edit">
+                </form></td>
+                <td><form action="." method="post">
+                    <input type="hidden" name="action"
+                           value="delete_recipe">
+                    <input type="hidden" name="recipe_id"
+                           value="insert php">
+                    <input type="submit" value="Delete">
+                </form></td>-->
+            </tr>
+            <?php endforeach; ?>
                   
               </table>
                   
