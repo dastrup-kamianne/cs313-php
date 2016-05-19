@@ -25,22 +25,26 @@ $statement->closeCursor();
           
           <main>
               
-              <table>
+              <table id="patientlist">
                   <tr>
                   <th>First Name</th>
                   <th>Last Name</th>
+                  <th>Patient Number</th>
                   </tr>
                   
                   
                     <?php foreach ($patient as $pt) {
-                    echo '<tr><td>' . $pt['firstName'] . '</td>' . 
+                    echo '<tr><td><a href="details.php">' . $pt['patientNumber'] . '</a></td>' . 
+                        '<td>' . $pt['firstName'] . '</td>' . 
                             '<td>' . $pt['lastName']. '</td></tr>';
                     } ?>
                   
               </table>
                   
-              <a href="patient_list">View all patients</a>
-              <a href="patient_search">Search for patients</a>
+              <ul> 
+                  <li><a href="patient_list.php">View all patients</a></li>
+                  <li><a href="patient_search.php">Search for patients</a></li>
+              </ul>
               
           </main>
           
