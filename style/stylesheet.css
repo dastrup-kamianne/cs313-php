@@ -234,6 +234,15 @@ q{
     color: #f9b72b
 }
 
+#patientlist{
+    border-collapse: collapse;
+    border: 1px solid #f9b72b;
+}
+#patientlist th, td{
+    border-bottom: 1px solid #f9b72b;
+    padding: 10px;
+}
+
 
 /*Import for mobile phones*/
 @media only screen and (max-device-width: 767px) and (orientation: portrait),
