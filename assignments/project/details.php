@@ -3,21 +3,17 @@
 include 'db_connect.php'; 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
- $number = test_input($_POST["patientNumber"]);
+ $number = ($_POST['patientNumber']);
  $patient = display_details($number);
   
- function test_input($data){
-    $data = trim($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
+
 
 function display_details($number) {
     global $db;
     $query = 'SELECT * FROM patient
-             WHERE patientNumber = :patientNumber;';
+             WHERE patientNumber = :number;';
 $statement = $db->prepare($query);
-$statement->bindValue(':patientNumber', $patientNumber);
+$statement->bindValue(':number', $number);
 $statement->execute();
 $patient = $statement->fetch();
 $statement->closeCursor();
