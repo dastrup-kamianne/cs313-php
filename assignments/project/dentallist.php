@@ -18,10 +18,10 @@ include 'db_connect.php';
      </header>
           
           <main>
-              
-              <a href="patient_list.php">View all patients</a>
-              <a href="patient_search.php">Search for patients</a>
-              
+              <ul> 
+                  <li><a href="patient_list.php">View all patients</a></li>
+                  <li><a href="patient_search.php">Search for patients</a></li>
+              </ul>
           </main>
           
     <footer>

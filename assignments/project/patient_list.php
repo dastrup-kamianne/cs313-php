@@ -26,16 +26,15 @@ $statement->closeCursor();
           <main>
               
               <table>
+                  <tr>
                   <th>First Name</th>
-                  
-                    <?php foreach ($patient as $pt) {
-                    echo '<tr>' . $pt['firstName'] . '</tr>';
-                    } ?>
-                  
                   <th>Last Name</th>
+                  </tr>
+                  
                   
                     <?php foreach ($patient as $pt) {
-                    echo '<tr>' . $pt['lastName'] . '</tr>';
+                    echo '<tr><td>' . $pt['firstName'] . '</td>' . 
+                            '<td>' . $pt['lastName']. '</td></tr>';
                     } ?>
                   
               </table>
