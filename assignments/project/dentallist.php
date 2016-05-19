@@ -19,8 +19,8 @@ include 'db_connect.php';
           
           <main>
               
-              <a href="patient_list">View all patients</a>
-              <a href="patient_search">Search for patients</a>
+              <a href="patient_list.php">View all patients</a>
+              <a href="patient_search.php">Search for patients</a>
               
           </main>
           
