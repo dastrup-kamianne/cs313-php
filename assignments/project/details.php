@@ -1,26 +1,6 @@
 <?php
 
-include 'db_connect.php'; 
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
- $number = ($_POST['patientNumber']);
- $patient = display_details($number);
-  
-
-
-function display_details($number) {
-    global $db;
-    $query = 'SELECT * FROM patient
-             WHERE patientNumber = :number;';
-$statement = $db->prepare($query);
-$statement->bindValue(':number', $number);
-$statement->execute();
-$patient = $statement->fetch();
-$statement->closeCursor();
-return $patient;
-
-}
-}
 
 ?>
 <!DOCTYPE html> 

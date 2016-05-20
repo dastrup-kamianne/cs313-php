@@ -1,13 +1,5 @@
 <?php
 
-include 'db_connect.php'; 
-
-$query = 'SELECT *
-          FROM patient;';
-$statement = $db->prepare($query);
-$statement->execute();
-$patient = $statement->fetchAll();
-$statement->closeCursor();
 
 ?>
 <!DOCTYPE html> 
