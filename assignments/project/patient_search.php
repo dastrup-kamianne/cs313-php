@@ -21,10 +21,26 @@
                   
               
                   
-              <ul> 
-                  <li><a href="patient_list.php">View all patients</a></li>
-                  <li><a href="patient_search.php">Search for patients</a></li>
-              </ul>
+              <table id="links">
+                  <tr>  
+                <td><form action="." method="post">
+                    <input type="hidden" name="action"
+                           value ="get_patients">
+                    
+                    <input type="submit" value="View All Patients">
+                </form></td>
+                  </tr>
+                  
+                  <tr>  
+                <td><form action="." method="post">
+                    <input type="hidden" name="action"
+                           value ="search_patients">
+                    
+                    <input type="submit" value="Search For Patients">
+                </form></td>
+                  </tr>
+                 
+              </table>
               
           </main>
           

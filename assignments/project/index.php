@@ -27,7 +27,7 @@ switch ($action){
     case 'patient_details':
         $patient_id = filter_input(INPUT_POST, 'patientNumber', 
             FILTER_VALIDATE_INT);
-        $patient = display_details($patient_id);
+        //$patient = display_details($patient_id);
         include('details.php');
         break;
     
