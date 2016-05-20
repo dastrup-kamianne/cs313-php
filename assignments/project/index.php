@@ -16,7 +16,7 @@ switch ($action){
         break;
     
     case 'get_patients':
-        $patients = get_patients();
+        //$patients = get_patients();
         include ('patient_list.php');
         break;
         

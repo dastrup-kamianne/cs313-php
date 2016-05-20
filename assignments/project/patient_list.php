@@ -1,12 +1,13 @@
 <?php
-/*include ('db_connect.php');
+include ('db_connect.php');
+
 
 $query = 'SELECT * FROM patient
          ORDER BY patientNumber';
 $statement = $db->prepare($query);
 $statement->execute();
 $patients = $statement->fetchAll();
-$statement->closeCursor();*/
+$statement->closeCursor();
 
 ?>
 <!DOCTYPE html> 
