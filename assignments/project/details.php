@@ -2,12 +2,12 @@
 include ('db_connect.php');
 
 $patient = display_details($patient_id);
-function display_details($number) {
+function display_details($patient_id) {
     global $db;
     $query = 'SELECT * FROM patient
-             WHERE patientNumber = :number';
+             WHERE patientNumber = :patient_id';
 $statement = $db->prepare($query);
-$statement->bindValue(':number', $number);
+$statement->bindValue(':patient_id', $patient_id);
 $statement->execute();
 $patient = $statement->fetch();
 $statement->closeCursor();
