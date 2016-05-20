@@ -12,7 +12,6 @@ if ($action == NULL) {
 
 switch ($action){
     case 'get_patients':
-        $patients = get_patients();
         include ('patient_list.php');
         break;
         
