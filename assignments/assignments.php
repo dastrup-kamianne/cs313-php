@@ -17,7 +17,7 @@
       <h2>Assignments</h2>
       <ul class="exercise">
           <li><a href='survey/survey.php'>PHP Survey</a></li>
-          <li><a href='project/dentallist.php'>Dental Patient List</a></li>
+          <li><a href='project'>Dental Patient List</a></li>
       </ul><br>
         </main>
     <footer>
