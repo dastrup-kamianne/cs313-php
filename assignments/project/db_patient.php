@@ -1,8 +1,8 @@
 <?php
 
 function get_patients(){
-$query = 'SELECT * FROM patient'
-        . 'ORDER BY patientNumber';
+$query = 'SELECT * FROM patient
+         ORDER BY patientNumber';
 $statement = $db->prepare($query);
 $statement->execute();
 $patients = $statement->fetchAll();
