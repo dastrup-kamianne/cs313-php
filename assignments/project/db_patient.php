@@ -7,9 +7,10 @@ $statement = $db->prepare($query);
 $statement->execute();
 $patients = $statement->fetchAll();
 $statement->closeCursor();
+return $patients;
 }
 
-function display_details($number) {
+/*function display_details($number) {
     global $db;
     $query = 'SELECT * FROM patient
              WHERE patientNumber = :number';
@@ -18,7 +19,9 @@ $statement->bindValue(':number', $number);
 $statement->execute();
 $patient = $statement->fetch();
 $statement->closeCursor();
-return $patient;}
+return $patient;
+
+}*/
 
 
 
