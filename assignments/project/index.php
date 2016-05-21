@@ -29,6 +29,8 @@ switch ($action){
         include('details.php');
         break;
     
-    
-}
+    case 'search':
+        include('search_results.php');
+        break;
+    }
 ?>
