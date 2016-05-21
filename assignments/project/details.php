@@ -3,21 +3,6 @@ include ('db_connect.php');
 
 $patient_id = filter_input(INPUT_POST, 'patientNumber', 
             FILTER_VALIDATE_INT);
-echo $patient_id;
-
-//$patient = display_details($patient_id);
-
-/*function display_details($patient_id) {
-    global $db;
-    $query = 'SELECT * FROM patient
-             WHERE patientNumber = :patient_id';
-$statement = $db->prepare($query);
-$statement->bindValue(":patient_id", $patient_id);
-$statement->execute();
-$patient = $statement->fetch();
-$statement->closeCursor();
-return $patient;
-}*/
 
 $query = 'SELECT * FROM patient
          WHERE patientNumber = :patient_id';
@@ -25,6 +10,22 @@ $statement = $db->prepare($query);
 $statement->bindValue(":patient_id", $patient_id);
 $statement->execute();
 $patient = $statement->fetch();
+$statement->closeCursor();
+
+$query = 'SELECT * FROM apptHistory
+         WHERE patientNumber = :patient_id';
+$statement = $db->prepare($query);
+$statement->bindValue(":patient_id", $patient_id);
+$statement->execute();
+$appt = $statement->fetch();
+$statement->closeCursor();
+
+$query = 'SELECT * FROM preferences
+         WHERE patientNumber = :patient_id';
+$statement = $db->prepare($query);
+$statement->bindValue(":patient_id", $patient_id);
+$statement->execute();
+$preferences = $statement->fetch();
 $statement->closeCursor();
 
 ?>
@@ -59,6 +60,28 @@ $statement->closeCursor();
                       <td><?php echo $patient['city'] . ', ' . $patient['state'] . ' ' . $patient['zipCode'];?></td>
                       <td><?php echo $patient['email'];?></td>
                       <td><?php echo $patient['phone'];?></td>
+                  </tr>
+              </table>
+              
+              <table>
+                  <tr><th>Appt Date</th>
+                      <th>Appt Type</th>
+                  </tr>
+                  <?php foreach ($apptHistory as $appt) : ?>
+                  <tr>
+                      <td><?php echo $appt['apptDate'];?></td>
+                      <td><?php echo $appt['apptType'];?></td>
+                  </tr>
+                  <?php endforeach; ?>
+              </table>
+              
+              <table>
+                  <tr><th>Contact Method</th>
+                      <th>Notes</th>
+                  </tr>
+                  <tr>
+                      <td><?php echo $preferences['contactMethod'];?></td>
+                      <td><?php echo $preferences['notes'];?></td>
                   </tr>
               </table>
 
