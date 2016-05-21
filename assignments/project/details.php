@@ -17,7 +17,7 @@ $query = 'SELECT * FROM apptHistory
 $statement = $db->prepare($query);
 $statement->bindValue(":patient_id", $patient_id);
 $statement->execute();
-$appt = $statement->fetch();
+$apptHistory = $statement->fetch();
 $statement->closeCursor();
 
 $query = 'SELECT * FROM preferences
