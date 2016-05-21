@@ -5,7 +5,7 @@ $patient_id = filter_input(INPUT_POST, 'patientNumber',
             FILTER_VALIDATE_INT);
 echo $patient_id;
 
-$patient = display_details($patient_id);
+/*$patient = display_details($patient_id);
 
 function display_details($patient_id) {
     global $db;
@@ -17,8 +17,14 @@ $statement->execute();
 $patient = $statement->fetch();
 $statement->closeCursor();
 return $patient;
+}*/
 
-}
+$query = 'SELECT * FROM patient
+         WHERE patientNumber = 1';
+$statement = $db->prepare($query);
+$statement->execute();
+$patient = $statement->fetch();
+$statement->closeCursor();
 
 ?>
 <!DOCTYPE html> 
