@@ -1,5 +1,5 @@
 <?php
-//include ('db_connect.php');
+include ('db_connect.php');
 
 $patient_id = filter_input(INPUT_POST, 'patientNumber', 
             FILTER_VALIDATE_INT);
