@@ -1,6 +1,8 @@
 <?php
 include ('db_connect.php');
 
+$patient_id = filter_input(INPUT_POST, 'patientNumber', 
+            FILTER_VALIDATE_INT);
 $patient = display_details($patient_id);
 function display_details($patient_id) {
     global $db;
