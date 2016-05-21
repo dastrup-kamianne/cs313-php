@@ -5,9 +5,9 @@ $patient_id = filter_input(INPUT_POST, 'patientNumber',
             FILTER_VALIDATE_INT);
 echo $patient_id;
 
-/*$patient = display_details($patient_id);
+//$patient = display_details($patient_id);
 
-function display_details($patient_id) {
+/*function display_details($patient_id) {
     global $db;
     $query = 'SELECT * FROM patient
              WHERE patientNumber = :patient_id';
@@ -20,8 +20,9 @@ return $patient;
 }*/
 
 $query = 'SELECT * FROM patient
-         WHERE patientNumber = 1';
+         WHERE patientNumber = :patient_id';
 $statement = $db->prepare($query);
+$statement->bindValue(":patient_id", $patient_id);
 $statement->execute();
 $patient = $statement->fetch();
 $statement->closeCursor();
