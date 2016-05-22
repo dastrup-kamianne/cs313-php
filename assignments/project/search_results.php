@@ -80,39 +80,41 @@ $statement->closeCursor();}
           <main>
               
               <table>
+                  <?php foreach ($patientln as $patient) : ?>
                   <tr>
-                      <td><?php echo $patientln['firstName'];?></td>
-                      <td><?php echo $patientln['lastName'];?></td>
-                      <td><?php echo $patientln['phone'];?></td>
-                  </tr>
-                  <tr>
-                      <td><?php echo $patientfn['firstName'];?></td>
-                      <td><?php echo $patientfn['lastName'];?></td>
-                      <td><?php echo $patientfn['phone'];?></td>
-                  </tr>
-              </table>
-              
-              <table>
-                  <tr><th>Appt Date</th>
-                      <th>Appt Type</th>
-                  </tr>
-                  <?php foreach ($patientd as $date) : ?>
-                  <tr>
-                      <td><?php echo $date['apptDate'];?></td>
-                      <td><?php echo $date['apptType'];?></td>
+                      <td><?php echo $patient['firstName'];?></td>
+                      <td><?php echo $patient['lastName'];?></td>
+                      <td><?php echo $patient['streetAddress'];?></td>
+                      <td><?php echo $patient['city'] . ', ' . $patient['state'] . ' ' . $patient['zipCode'];?></td>
+                      <td><?php echo $patient['email'];?></td>
+                      <td><?php echo $patient['phone'];?></td>
                   </tr>
                   <?php endforeach; ?>
               </table>
               
               <table>
-                  <tr><th>Contact Method</th>
-                      <th>Notes</th>
-                  </tr>
+                  <?php foreach ($patientfn as $patient) : ?>
                   <tr>
-                      <td><?php echo $preferences['contactMethod'];?></td>
-                      <td><?php echo $preferences['notes'];?></td>
+                      <td><?php echo $patient['firstName'];?></td>
+                      <td><?php echo $patient['lastName'];?></td>
+                      <td><?php echo $patient['streetAddress'];?></td>
+                      <td><?php echo $patient['city'] . ', ' . $patient['state'] . ' ' . $patient['zipCode'];?></td>
+                      <td><?php echo $patient['email'];?></td>
+                      <td><?php echo $patient['phone'];?></td>
                   </tr>
+                  <?php endforeach; ?>
               </table>
+              
+              <table>
+                  <?php foreach ($patientd as $date) : ?>
+                  <tr>
+                      <td>Date: <?php echo $date['apptDate'];?></td>
+                      <td>Type: <?php echo $date['apptType'];?></td>
+                  </tr>
+                  <?php endforeach; ?>
+              </table>
+              
+              
 
                   
               <table id="links">
