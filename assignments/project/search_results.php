@@ -77,7 +77,7 @@ $statement->closeCursor();}
           
           <main>
               
-              <table>
+              <table class="resultlist">
                   <?php foreach ($patientln as $patient) : ?>
                   <tr>
                       <td><?php echo $patient['firstName'];?></td>
@@ -90,7 +90,7 @@ $statement->closeCursor();}
                   <?php endforeach; ?>
               </table>
               
-              <table>
+              <table class="resultlist">
                   <?php foreach ($patientfn as $patient) : ?>
                   <tr>
                       <td><?php echo $patient['firstName'];?></td>
@@ -103,7 +103,7 @@ $statement->closeCursor();}
                   <?php endforeach; ?>
               </table>
               
-              <table>
+              <table class="resultlist">
                   <?php foreach ($patientd as $date) : ?>
                   <tr>
                       <td>Patient ID: <?php echo $date['patientNumber'];?></td>

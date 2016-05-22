@@ -44,7 +44,7 @@ $statement->closeCursor();
           
           <main>
               
-              <table>
+              <table class="details">
                   <tr><th>First Name</th>
                       <th>Last Name</th>
                       <th>Address</th>
@@ -63,7 +63,7 @@ $statement->closeCursor();
                   </tr>
               </table>
               
-              <table>
+              <table class="details">
                   <tr><th>Appt Date</th>
                       <th>Appt Type</th>
                   </tr>
@@ -75,7 +75,7 @@ $statement->closeCursor();
                   <?php endforeach; ?>
               </table>
               
-              <table>
+              <table class="details">
                   <tr><th>Contact Method</th>
                       <th>Notes</th>
                   </tr>
