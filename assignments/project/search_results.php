@@ -1,14 +1,6 @@
 <?php
 include ('db_connect.php');
 
-$lname = filter_input(INPUT_POST, 'lname', 
-            FILTER_VALIDATE_INT);
-
-$fname = filter_input(INPUT_POST, 'fname', 
-            FILTER_VALIDATE_INT);
-
-$date = filter_input(INPUT_POST, 'date', 
-            FILTER_VALIDATE_INT);
 
 $query = 'SELECT * FROM patient
          WHERE lastName = :lname';

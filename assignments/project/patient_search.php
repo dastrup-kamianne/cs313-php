@@ -31,6 +31,7 @@
               
                   <label>Search by date:</label>
                   <select name="date">
+                      <option value=""></option>
                       <option value="3months">3 Months</option>
                       <option value="6months">6 Months</option>
                       <option value="9months">9 Months</option>

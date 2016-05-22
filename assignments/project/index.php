@@ -20,6 +20,19 @@ switch ($action){
         break;
         
     case 'search_patients':
+        $lname = filter_input(INPUT_POST, 'lname', 
+            FILTER_VALIDATE_INT);
+
+        $fname = filter_input(INPUT_POST, 'fname', 
+            FILTER_VALIDATE_INT);
+
+        $date = filter_input(INPUT_POST, 'date', 
+            FILTER_VALIDATE_INT);
+        
+        echo $lname;
+        echo $fname;
+        echo $date;
+
         include('patient_search.php');
         break;
     
