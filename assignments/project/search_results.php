@@ -1,11 +1,11 @@
 <?php
 include ('db_connect.php');
 
- $lname = filter_input(INPUT_POST, 'lname');
+ 
 
- $fname = filter_input(INPUT_POST, 'fname');
+ 
 
- $date = filter_input(INPUT_POST, 'date');
+ 
         
         echo $lname;
         echo $fname;

@@ -29,8 +29,18 @@ switch ($action){
         include('details.php');
         break;
     
-    case 'search':
-        
+    case 'searchlname':
+        $lname = filter_input(INPUT_POST, 'lname');
+        include('search_results.php');
+        break;
+    
+    case 'searchfname':
+        $fname = filter_input(INPUT_POST, 'fname');
+        include('search_results.php');
+        break;
+    
+    case 'searchdate':
+        $date = filter_input(INPUT_POST, 'date');
         include('search_results.php');
         break;
     }

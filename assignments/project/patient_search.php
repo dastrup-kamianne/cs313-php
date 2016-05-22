@@ -16,19 +16,25 @@
      </header>
           
           <main>
-              <form action="index.php" method="post" id="lname_form">
-                  <input type="hidden" name="action" value="search">
+              <form action="index.php" method="post" class="search_form">
+                  <input type="hidden" name="action" value="searchlname">
                   
                   <label>Search by last name:</label>
-                  <input type ="text" name="lname"><br>
+                  <input type ="text" name="lname">
+                  <input type="submit" Value="Search"><br>
+              </form>
                   
                   
-              
+              <form action="index.php" method="post" class="search_form">
+                  <input type="hidden" name="action" value="searchfname">
                   <label>Search by first name:</label>
-                  <input type ="text" name="fname"><br>
+                  <input type ="text" name="fname">
+                  <input type="submit" Value="Search"><br>
+              </form>
                   
                   
-              
+              <form action="index.php" method="post" class="search_form">
+                  <input type="hidden" name="action" value="searchdate">
                   <label>Search by date:</label>
                   <select name="date">
                       <option value=""></option>
