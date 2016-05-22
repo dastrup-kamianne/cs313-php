@@ -20,17 +20,22 @@
                   <input type="hidden" name="action" value="search">
                   
                   <label>Search by last name:</label>
-                  <input type ="text" name="lname">
+                  <input type ="text" name="lname"><br>
                   
                   
               
                   <label>Search by first name:</label>
-                  <input type ="text" name="fname">
+                  <input type ="text" name="fname"><br>
                   
                   
               
                   <label>Search by date:</label>
-                  <input type ="text" name="date">
+                  <select name="date">
+                      <option value="3months">3 Months</option>
+                      <option value="6months">6 Months</option>
+                      <option value="9months">9 Months</option>
+                      <option value="1year">1 Year</option>
+                  </select><br>
                   
                   <input type="submit" Value="Search">
               </form>
