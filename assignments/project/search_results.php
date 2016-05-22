@@ -106,6 +106,7 @@ $statement->closeCursor();}
               <table>
                   <?php foreach ($patientd as $date) : ?>
                   <tr>
+                      <td>Patient ID: <?php echo $date['patientNumber'];?></td>
                       <td>Date: <?php echo $date['apptDate'];?></td>
                       <td>Type: <?php echo $date['apptType'];?></td>
                   </tr>
