@@ -11,7 +11,7 @@ $statement->bindValue(":lname", $lname);
 $statement->execute();
 $patientln = $statement->fetchAll();
 $statement->closeCursor();
-echo $patientln;
+print_r ($patientln);
 }
 
 if ($fname !== NULL){
