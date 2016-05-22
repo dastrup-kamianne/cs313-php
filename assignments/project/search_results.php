@@ -10,30 +10,62 @@ include ('db_connect.php');
         echo $lname;
         echo $fname;
         echo $date;
-        
+
+if ($lname !== NULL){
 $query = 'SELECT * FROM patient
          WHERE lastName = :lname';
 $statement = $db->prepare($query);
 $statement->bindValue(":lname", $lname);
 $statement->execute();
 $patientln = $statement->fetchAll();
-$statement->closeCursor();
+$statement->closeCursor();}
 
+if ($fname !== NULL){
 $query = 'SELECT * FROM patient
          WHERE firstName = :fname';
 $statement = $db->prepare($query);
 $statement->bindValue(":fname", $fname);
 $statement->execute();
 $patientfn = $statement->fetchAll();
-$statement->closeCursor();
+$statement->closeCursor();}
 
+if ($date == '3months'){
 $query = 'SELECT * FROM apptHistory
-         WHERE date >= :date';
+         WHERE date >= SYSDATE + 90';
 $statement = $db->prepare($query);
 $statement->bindValue(":date", $date);
 $statement->execute();
 $patientd = $statement->fetchAll();
-$statement->closeCursor();
+$statement->closeCursor();}
+
+elseif ($date == '6months'){
+$query = 'SELECT * FROM apptHistory
+         WHERE date >= SYSDATE + 180';
+$statement = $db->prepare($query);
+$statement->bindValue(":date", $date);
+$statement->execute();
+$patientd = $statement->fetchAll();
+$statement->closeCursor();}
+
+elseif ($date == '9months'){
+$query = 'SELECT * FROM apptHistory
+         WHERE date >= SYSDATE + 270';
+$statement = $db->prepare($query);
+$statement->bindValue(":date", $date);
+$statement->execute();
+$patientd = $statement->fetchAll();
+$statement->closeCursor();}
+
+elseif ($date == '1year'){
+$query = 'SELECT * FROM apptHistory
+         WHERE date >= SYSDATE + 365';
+$statement = $db->prepare($query);
+$statement->bindValue(":date", $date);
+$statement->execute();
+$patientd = $statement->fetchAll();
+$statement->closeCursor();}
+
+
 
 ?>
 <!DOCTYPE html> 
