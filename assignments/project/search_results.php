@@ -4,27 +4,28 @@ include ('db_connect.php');
 
 
 if ($lname !== NULL){
-    echo $lname;
 $query = 'SELECT * FROM patient
          WHERE lastName = :lname';
 $statement = $db->prepare($query);
 $statement->bindValue(":lname", $lname);
 $statement->execute();
 $patientln = $statement->fetchAll();
-$statement->closeCursor();}
+$statement->closeCursor();
+echo $patientln;
+}
 
 if ($fname !== NULL){
-    echo $fname;
 $query = 'SELECT * FROM patient
          WHERE firstName = :fname';
 $statement = $db->prepare($query);
 $statement->bindValue(":fname", $fname);
 $statement->execute();
 $patientfn = $statement->fetchAll();
-$statement->closeCursor();}
+$statement->closeCursor();
+return $patientfn;
+}
 
 if ($date == '3months'){
-    echo $date;
 $query = 'SELECT * FROM apptHistory
          WHERE date >= SYSDATE + 90';
 $statement = $db->prepare($query);
