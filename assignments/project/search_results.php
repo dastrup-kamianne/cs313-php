@@ -11,7 +11,6 @@ $statement->bindValue(":lname", $lname);
 $statement->execute();
 $patientln = $statement->fetchAll();
 $statement->closeCursor();
-print_r ($patientln);
 }
 
 if ($fname !== NULL){
@@ -22,7 +21,6 @@ $statement->bindValue(":fname", $fname);
 $statement->execute();
 $patientfn = $statement->fetchAll();
 $statement->closeCursor();
-return $patientfn;
 }
 
 if ($date == '3months'){
