@@ -25,7 +25,7 @@ $statement->closeCursor();
 
 if ($date == '3months'){
 $query = 'SELECT * FROM apptHistory
-         WHERE date >= SYSDATE + 90';
+         WHERE apptDate <= CURDATE() - 90';
 $statement = $db->prepare($query);
 $statement->bindValue(":date", $date);
 $statement->execute();
@@ -34,7 +34,7 @@ $statement->closeCursor();}
 
 elseif ($date == '6months'){
 $query = 'SELECT * FROM apptHistory
-         WHERE date >= SYSDATE + 180';
+         WHERE apptDate <= CURDATE() - 180';
 $statement = $db->prepare($query);
 $statement->bindValue(":date", $date);
 $statement->execute();
@@ -43,7 +43,7 @@ $statement->closeCursor();}
 
 elseif ($date == '9months'){
 $query = 'SELECT * FROM apptHistory
-         WHERE date >= SYSDATE + 270';
+         WHERE apptDate <= CURDATE() - 270';
 $statement = $db->prepare($query);
 $statement->bindValue(":date", $date);
 $statement->execute();
@@ -52,7 +52,7 @@ $statement->closeCursor();}
 
 elseif ($date == '1year'){
 $query = 'SELECT * FROM apptHistory
-         WHERE date >= SYSDATE + 365';
+         WHERE apptDate <= CURDATE() - 365';
 $statement = $db->prepare($query);
 $statement->bindValue(":date", $date);
 $statement->execute();
