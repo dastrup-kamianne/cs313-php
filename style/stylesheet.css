@@ -256,6 +256,11 @@ main li a:hover{
   margin-right: auto;
 }
 
+#links td{
+   border-bottom: 1px solid white;
+    padding: 10px;
+}
+
 .details{
     border-collapse: collapse;
     border: 1px solid #f9b72b;
