@@ -42,9 +42,9 @@
                       <option value="6months">6 Months</option>
                       <option value="9months">9 Months</option>
                       <option value="1year">1 Year</option>
-                  </select><br>
+                  </select>
                   
-                  <input type="submit" Value="Search">
+                  <input type="submit" Value="Search"><br>
               </form>
               
                   
