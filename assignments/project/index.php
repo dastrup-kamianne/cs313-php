@@ -20,7 +20,17 @@ switch ($action){
         break;
         
     case 'search_patients':
-        $lname = filter_input(INPUT_POST, 'lname', 
+      include('patient_search.php');
+        break;
+    
+    case 'patient_details':
+        $patient_id = filter_input(INPUT_POST, 'patientNumber', 
+            FILTER_VALIDATE_INT);
+        include('details.php');
+        break;
+    
+    case 'search':
+         $lname = filter_input(INPUT_POST, 'lname', 
             FILTER_VALIDATE_INT);
 
         $fname = filter_input(INPUT_POST, 'fname', 
@@ -32,17 +42,6 @@ switch ($action){
         echo $lname;
         echo $fname;
         echo $date;
-
-        include('patient_search.php');
-        break;
-    
-    case 'patient_details':
-        $patient_id = filter_input(INPUT_POST, 'patientNumber', 
-            FILTER_VALIDATE_INT);
-        include('details.php');
-        break;
-    
-    case 'search':
         include('search_results.php');
         break;
     }
