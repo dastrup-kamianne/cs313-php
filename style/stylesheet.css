@@ -250,8 +250,8 @@ main li a:hover{
 }
 
 #links {
-  border:none;
-  display: block;
+  border-collapse: collapse;
+    border: 1px solid white;
   margin-left: auto;
   margin-right: auto;
 }
