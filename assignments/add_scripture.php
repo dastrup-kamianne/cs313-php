@@ -48,7 +48,7 @@ $statement->closeCursor();
         <input type="text" name="verse"><br>
         
         <label>Content:</label>
-        <textarea name="content" rows="10" cols="50"></textarea>
+        <textarea name="content" rows="10" cols="50"></textarea><br>
         
         <?php foreach ($topics as $topic) : ?>
         <label>Topic:</label>

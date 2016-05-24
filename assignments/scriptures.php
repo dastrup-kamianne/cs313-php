@@ -9,6 +9,28 @@ $dbName = 'scriptures';
 $db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword); 
 
 
+$book = filter_input(INPUT_POST, 'book');
+$chapter = filter_input(INPUT_POST, 'chapter', FILTER_VALIDATE_INT);
+$verse = filter_input(INPUT_POST, 'verse', FILTER_VALIDATE_INT);
+$content = filter_input(INPUT_POST, 'content');
+
+$query = 'INSERT INTO scriptures
+                 (book, chapter, verse, content)
+              VALUES
+                 (:book, :chapter, :verse, :content)';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':book', $book);
+    $statement->bindValue(':chapter', $chapter);
+    $statement->bindValue(':verse', $verse);
+    $statement->bindValue(':content', $content);
+    $statement->execute();
+    $statement->closeCursor();
+
+
+
+
+
+
 $query = 'SELECT *
           FROM scriptures;';
 $statement = $db->prepare($query);
