@@ -26,9 +26,31 @@ $query = 'INSERT INTO scriptures
     $statement->execute();
     $statement->closeCursor();
 
+$faith = isset($_POST['Faith']);
+$sacrifice = isset($_POST['Sacrifice']);
+$charity = isset($_POST['Charity']);
 
-
-
+if($faith || $charity || $sacrifice){
+$query = 'INSERT INTO scrip_tops
+                 (scriptureID, topicID)
+              VALUES';
+$valuesArray = [];
+if($faith){
+    $valuesArray[] = '(:scripID, 1)';
+}
+if($sacrifice){
+    $valuesArray[] = '(:scripID, 2)';
+}
+if($charity){
+    $valuesArray[] = '(:scripID, 3)';
+}
+$query = $query . implode(', ', $valuesArray);
+                 
+    $statement = $db->prepare($query);
+    $statement->bindValue(':scripID', $db->lastInsertId());
+    $statement->execute();
+    $statement->closeCursor();
+}
 
 
 $query = 'SELECT *

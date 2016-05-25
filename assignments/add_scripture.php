@@ -50,8 +50,8 @@ $statement->closeCursor();
         <label>Content:</label>
         <textarea name="content" rows="10" cols="50"></textarea><br>
         
-        <?php foreach ($topics as $topic) : ?>
         <label>Topic:</label>
+        <?php foreach ($topics as $topic) : ?>
         <input type="checkbox" name="<?php echo $topic['name']; ?>">
         <?php echo $topic['name'];?><br>
         <?php endforeach; ?>
