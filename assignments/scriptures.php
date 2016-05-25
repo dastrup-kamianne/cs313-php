@@ -99,12 +99,12 @@ $statement->closeCursor();
         echo '<strong>' . $scripture['book'] . " " . $scripture['chapter']
                 . ':' . $scripture['verse'] . '</strong> - ' 
                 . '"' . $scripture['content'] . '"<br>';
-        
-        if ($topic['scriptureID'] = $scripture['id']){
-            echo $topic['name'];
+        foreach ($topics as $topic){
+        if ($topic['scriptureID'] == $scripture['id']){
+        echo $topic['name']; }}
         }
         
-    } 
+    
     
     ?>
     
