@@ -98,12 +98,16 @@ $statement->closeCursor();
     <?php foreach ($scriptures as $scripture) {
         echo '<strong>' . $scripture['book'] . " " . $scripture['chapter']
                 . ':' . $scripture['verse'] . '</strong> - ' 
-                . '"' . $scripture['content'] ;
+                . '"' . $scripture['content'] . '"';
         foreach ($topics as $topic){
+            echo "<ul>";
         if ($topic['scriptureID'] == $scripture['id']){
-        echo " Topics: " . $topic['name']; }}
+        echo " <li> " . $topic['name'] . "</li>"; }
+            echo "</ul>";
+        }
         echo "<br>";
         }
+        
         
     
     
