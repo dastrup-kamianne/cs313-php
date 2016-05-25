@@ -61,10 +61,24 @@ $scriptures = $statement->fetchAll();
 $statement->closeCursor();
 
 
+$query = 'SELECT * FROM scrip_tops;';
+$statement = $db->prepare($query);
+$statement->execute();
+$scrip_tops = $statement->fetchAll();
+$statement->closeCursor();
 
 
+$query = 'SELECT scriptureID, topicID, name 
+        FROM scrip_tops AS st 
+        JOIN topics AS t 
+        ON st.topicID = t.id;';
+$statement = $db->prepare($query);
+$statement->execute();
+$topics = $statement->fetchAll();
+$statement->closeCursor();
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang ="en">
@@ -85,7 +99,13 @@ $statement->closeCursor();
         echo '<strong>' . $scripture['book'] . " " . $scripture['chapter']
                 . ':' . $scripture['verse'] . '</strong> - ' 
                 . '"' . $scripture['content'] . '"<br>';
-    }
+        foreach ($topics as $topic){
+        if ($topics['scriptureID'] = $scripture['id']){
+            echo $topic['name'];
+        }
+        }
+        
+    } 
     
     ?>
     
