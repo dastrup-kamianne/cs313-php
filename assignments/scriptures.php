@@ -100,7 +100,7 @@ $statement->closeCursor();
                 . ':' . $scripture['verse'] . '</strong> - ' 
                 . '"' . $scripture['content'] . '"<br>';
         foreach ($topics as $topic){
-        if ($topics['scriptureID'] = $scripture['id']){
+        if ($topic['scriptureID'] = $scripture['id']){
             echo $topic['name'];
         }
         }
