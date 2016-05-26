@@ -51,28 +51,30 @@ $statement->closeCursor();
                   <input type="hidden" name="id" value ="<?php echo $patient['patientNumber'];?>">
                   
                   <label>First Name:</label>
-                  <input type="text" name="fname" value="<?php echo $patient['firstName'];?>">
+                  <input type="text" name="fname" value="<?php echo $patient['firstName'];?>"><br>
                   
                   <label>Last Name:</label>
-                  <input type="text" name="lname" value="<?php echo $patient['lastName'];?>">
+                  <input type="text" name="lname" value="<?php echo $patient['lastName'];?>"><br>
                   
                   <label>Street Address:</label>
-                  <input type="text" name="address" value="<?php echo $patient['streetAddress'];?>">
+                  <input type="text" name="address" value="<?php echo $patient['streetAddress'];?>"><br>
                   
                   <label>City:</label>
-                  <input type="text" name="city" value="<?php echo $patient['city'];?>">
+                  <input type="text" name="city" value="<?php echo $patient['city'];?>"><br>
                   
                   <label>State:</label>
-                  <input type="text" name="state" value="<?php echo $patient['state'];?>">
+                  <input type="text" name="state" value="<?php echo $patient['state'];?>"><br>
                   
                   <label>Zip Code:</label>
-                  <input type="text" name="zipcode" value="<?php echo $patient['zipCode'];?>">
+                  <input type="text" name="zipcode" value="<?php echo $patient['zipCode'];?>"><br>
                   
                   <label>Phone:</label>
-                  <input type="text" name="phone" value="<?php echo $patient['phone'];?>">
+                  <input type="text" name="phone" value="<?php echo $patient['phone'];?>"><br>
                   
                   <label>Email:</label>
-                  <input type="text" name="email" value="<?php echo $patient['email'];?>">
+                  <input type="text" name="email" value="<?php echo $patient['email'];?>"><br>
+                  
+                  <input type="submit" value="Make Changes">
                   
               </form>
               

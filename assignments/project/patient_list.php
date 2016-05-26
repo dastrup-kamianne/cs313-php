@@ -31,6 +31,7 @@ $statement->closeCursor();
                   <th>First Name</th>
                   <th>Last Name</th>
                   <th>&nbsp</th>
+                  <th>&nbsp</th>
                   </tr>
                   
                   
