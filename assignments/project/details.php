@@ -1,6 +1,31 @@
 <?php
 include ('db_connect.php');
 
+if ($action == "edit_patient_db"){
+    $query = 'UPDATE patient
+             SET firstName = :fname
+             , lastName = :lname
+             , address = :streetAddress
+             , city = :city
+             , state = :state
+             , zipcode = :zipCode
+             , phone = :phone
+             , email = :email
+             WHERE patientNumber = :id';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':fname', $fname);
+    $statement->bindValue(':lname', $lname);
+    $statement->bindValue(':address', $address);
+    $statement->bindValue(':city', $city);
+    $statement->bindValue(':state', $state);
+    $statement->bindValue(':zipcode', $zipcode);
+    $statement->bindValue(':phone', $phone);
+    $statement->bindValue(':email', $email);
+    $statement->bindValue(':id', $id);
+    $statement->execute();
+    $statement->closeCursor();
+}
+
 $patient_id = filter_input(INPUT_POST, 'patientNumber', 
             FILTER_VALIDATE_INT);
 

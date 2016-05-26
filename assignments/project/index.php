@@ -47,28 +47,7 @@ switch ($action){
         $phone = filter_input(INPUT_POST, 'fname',FILTER_VALIDATE_INT);
         $email = filter_input(INPUT_POST, 'fname');
         
-        $query = 'UPDATE patient
-             SET firstName = :fname
-             , lastName = :lname
-             , address = :streetAddress
-             , city = :city
-             , state = :state
-             , zipcode = :zipCode
-             , phone = :phone
-             , email = :email
-             WHERE patientNumber = :id';
-    $statement = $db->prepare($query);
-    $statement->bindValue(':fname', $fname);
-    $statement->bindValue(':lname', $lname);
-    $statement->bindValue(':address', $address);
-    $statement->bindValue(':city', $city);
-    $statement->bindValue(':state', $state);
-    $statement->bindValue(':zipcode', $zipcode);
-    $statement->bindValue(':phone', $phone);
-    $statement->bindValue(':email', $email);
-    $statement->bindValue(':id', $id);
-    $statement->execute();
-    $statement->closeCursor();
+        
         include('details.php');
         break;
     
