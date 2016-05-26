@@ -47,6 +47,13 @@ $statement->closeCursor();
                            value="<?php echo $pt['patientNumber']; ?>">
                     <input type="submit" value="View Details">
                 </form></td>
+                <td><form action="." method="post">
+                    <input type="hidden" name="action"
+                           value ="patient_edit">
+                    <input type="hidden" name="patientNumber"
+                           value="<?php echo $pt['patientNumber']; ?>">
+                    <input type="submit" value="Edit">
+                </form></td>
                 
             </tr>
             <?php endforeach; ?>
