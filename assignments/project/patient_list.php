@@ -26,8 +26,8 @@ $statement->execute();
 $patient_id = $statement->fetch();
 $statement->closeCursor();
 
-
-
+echo $patient_id;
+/*
 $query = 'INSERT INTO apptHistory (patientNumber, apptDate, apptType)
          VALUES(:patient_id, :apptDate, :apptType);';
 $statement = $db->prepare($query);
@@ -44,7 +44,7 @@ $statement->bindValue(':patient_id', $patient_id);
 $statement->bindValue(':method', $method);
 $statement->bindValue(':notes', $notes);
 $statement->execute();
-$statement->closeCursor();
+$statement->closeCursor();*/
 }
 
 $query = 'SELECT * FROM patient
