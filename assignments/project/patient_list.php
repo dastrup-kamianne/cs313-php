@@ -17,10 +17,9 @@ $statement->bindValue(':phone', $phone);
 $statement->execute();
 $statement->closeCursor();
 
-echo $fname . $lname . $phone;
 $query = 'SELECT patientNumber FROM patient
-         WHERE fname = :fname
-         AND lname = :lname
+         WHERE firstName = :fname
+         AND lastName = :lname
          AND phone = :phone;';
 $statement = $db->prepare($query);
 $statement->bindValue(":fname", $fname);
@@ -30,7 +29,8 @@ $statement->execute();
 $patient_id = $statement->fetch();
 $statement->closeCursor();
 
-echo $patient_id;
+echo $patient_id . 'echo';
+print_r($patient_id);
 /*
 $query = 'INSERT INTO apptHistory (patientNumber, apptDate, apptType)
          VALUES(:patient_id, :apptDate, :apptType);';
