@@ -27,6 +27,7 @@ $patient_id = $statement->fetch();
 $statement->closeCursor();
 
 
+
 $query = 'INSERT INTO apptHistory (patientNumber, apptDate, apptType)
          VALUES(:patient_id, :apptDate, :apptType);';
 $statement = $db->prepare($query);

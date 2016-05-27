@@ -60,8 +60,8 @@ switch ($action){
         $city = filter_input(INPUT_POST, 'city');
         $state = filter_input(INPUT_POST, 'state');
         $zipcode = filter_input(INPUT_POST, 'zipcode',FILTER_VALIDATE_INT);
-        $phone = filter_input(INPUT_POST, 'fname',FILTER_VALIDATE_INT);
-        $email = filter_input(INPUT_POST, 'fname');
+        $email = filter_input(INPUT_POST, 'email');
+        $phone = filter_input(INPUT_POST, 'phone',FILTER_VALIDATE_INT);
         $apptDate = filter_input(INPUT_POST, 'apptDate');
         $apptType = filter_input(INPUT_POST, 'apptType');
         $method = filter_input(INPUT_POST, 'method');
