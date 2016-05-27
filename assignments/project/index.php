@@ -49,6 +49,26 @@ switch ($action){
         include('details.php');
         break;
     
+    case 'add_patient':
+        include('add_patient.php');
+        break;
+    
+    case 'add_patient_db':
+        $fname = filter_input(INPUT_POST, 'fname');
+        $lname = filter_input(INPUT_POST, 'lname');
+        $address = filter_input(INPUT_POST, 'address');
+        $city = filter_input(INPUT_POST, 'city');
+        $state = filter_input(INPUT_POST, 'state');
+        $zipcode = filter_input(INPUT_POST, 'zipcode',FILTER_VALIDATE_INT);
+        $phone = filter_input(INPUT_POST, 'fname',FILTER_VALIDATE_INT);
+        $email = filter_input(INPUT_POST, 'fname');
+        $apptDate = filter_input(INPUT_POST, 'apptDate');
+        $apptType = filter_input(INPUT_POST, 'apptType');
+        $method = filter_input(INPUT_POST, 'method');
+        $notes = filter_input(INPUT_POST, 'notes');
+        include('patient_list.php');
+        break;
+    
     case 'add_appt':
         $patient_id = filter_input(INPUT_POST, 'patientNumber', 
             FILTER_VALIDATE_INT);

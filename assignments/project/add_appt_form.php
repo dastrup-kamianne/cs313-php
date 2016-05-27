@@ -35,6 +35,36 @@ $patient_id = filter_input(INPUT_POST, 'patientNumber',
                   
               </form>
               
+              
+              <table id="links">
+                  <tr>  
+                <td><form action="." method="post">
+                    <input type="hidden" name="action"
+                           value ="get_patients">
+                    
+                    <input type="submit" value="View All Patients">
+                </form></td>
+                  </tr>
+                  
+                  <tr>  
+                <td><form action="." method="post">
+                    <input type="hidden" name="action"
+                           value ="add_patient">
+                    
+                    <input type="submit" value="Add New Patient">
+                </form></td>
+                  </tr>
+                  
+                  <tr>  
+                <td><form action="." method="post">
+                    <input type="hidden" name="action"
+                           value ="search_patients">
+                    
+                    <input type="submit" value="Search For Patients">
+                </form></td>
+                  </tr>
+                 
+              </table>
           </main>
           
     <footer>

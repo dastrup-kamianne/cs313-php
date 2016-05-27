@@ -51,7 +51,6 @@ $statement->closeCursor();
                 
             </tr>
             <?php endforeach; ?>
-                  
               </table>
                   
               <table id="links">
@@ -61,6 +60,15 @@ $statement->closeCursor();
                            value ="get_patients">
                     
                     <input type="submit" value="View All Patients">
+                </form></td>
+                  </tr>
+                  
+                  <tr>  
+                <td><form action="." method="post">
+                    <input type="hidden" name="action"
+                           value ="add_patient">
+                    
+                    <input type="submit" value="Add New Patient">
                 </form></td>
                   </tr>
                   

@@ -45,9 +45,51 @@ include ('db_connect.php');
                   <label>Email:</label>
                   <input type="text" name="email"><br>
                   
-                  <input type="submit" value="Add Appointment">
+                  <label>Appointment Date:</label>
+                  <input type="text" name="apptDate" ><br>
+                  
+                  <label>Appointment Type:</label>
+                  <input type="text" name="apptType"><br>
+                  
+                  <label>Contact Method:</label>
+                  <input type="text" name="method" ><br>
+                  
+                  <label>Notes:</label>
+                  <input type="text" name="notes"><br>
+                  
+                  <input type="submit" value="Add Patient">
                   
               </form>
+              
+              <table id="links">
+                  <tr>  
+                <td><form action="." method="post">
+                    <input type="hidden" name="action"
+                           value ="get_patients">
+                    
+                    <input type="submit" value="View All Patients">
+                </form></td>
+                  </tr>
+                  
+                  <tr>  
+                <td><form action="." method="post">
+                    <input type="hidden" name="action"
+                           value ="add_patient">
+                    
+                    <input type="submit" value="Add New Patient">
+                </form></td>
+                  </tr>
+                  
+                  <tr>  
+                <td><form action="." method="post">
+                    <input type="hidden" name="action"
+                           value ="search_patients">
+                    
+                    <input type="submit" value="Search For Patients">
+                </form></td>
+                  </tr>
+                 
+              </table>
               
           </main>
           
