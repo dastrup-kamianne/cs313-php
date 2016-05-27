@@ -19,11 +19,15 @@ $statement->closeCursor();
 
 
 $query = 'SELECT patientNumber FROM patient
-         WHERE phone = :phone;';
+         WHERE fname = :fname
+         AND lname = :lname
+         AND phone = :phone;';
 $statement = $db->prepare($query);
+$statement->bindValue(":fname", $fname);
+$statement->bindValue(":lname", $lname);
 $statement->bindValue(":phone", $phone);
 $statement->execute();
-$patient_id = $statement->fetch();
+$patient_id = $statement->fetchAll();
 $statement->closeCursor();
 
 echo $patient_id;
