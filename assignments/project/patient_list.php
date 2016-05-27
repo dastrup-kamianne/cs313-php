@@ -27,10 +27,12 @@ $statement->bindValue(":fname", $fname);
 $statement->bindValue(":lname", $lname);
 $statement->bindValue(":phone", $phone);
 $statement->execute();
-$patient_id = $statement->fetchAll();
+$patient_id = $statement->fetch();
 $statement->closeCursor();
+return $patient_id;
 
-echo $patient_id;
+echo $patient_id . 'echo';
+print_r($patient_id);
 /*
 $query = 'INSERT INTO apptHistory (patientNumber, apptDate, apptType)
          VALUES(:patient_id, :apptDate, :apptType);';
