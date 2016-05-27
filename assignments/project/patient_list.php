@@ -1,6 +1,48 @@
 <?php
 include ('db_connect.php');
 
+if ($action == 'add_patient_db'){
+    $query = 'INSERT INTO patient (firstName, lastName, streetAddress, city, state, zipCode, email, phone)
+         VALUES( :fname, :lname, :address, :city, :state, :zip, :email, :phone);';
+$statement = $db->prepare($query);
+$statement->bindValue(':fname', $fname);
+$statement->bindValue(':lname', $lname);
+$statement->bindValue(':address', $address);
+$statement->bindValue(':city', $city);
+$statement->bindValue(':state', $state);
+$statement->bindValue(':zip', $zip);
+$statement->bindValue(':email', $email);
+$statement->bindValue(':phone', $phone);
+$statement->execute();
+$statement->closeCursor();
+
+$query = 'SELECT patientNumber FROM patient
+         WHERE phone = :phone;';
+$statement = $db->prepare($query);
+$statement->bindValue(":phone", $phone);
+$statement->execute();
+$patient_id = $statement->fetch();
+$statement->closeCursor();
+return $patient_id;
+
+$query = 'INSERT INTO apptHistory (patientNumber, apptDate, apptType)
+         VALUES(:patient_id, :apptDate, :apptType);';
+$statement = $db->prepare($query);
+$statement->bindValue(':patient_id', $patient_id);
+$statement->bindValue(':apptDate', $apptDate);
+$statement->bindValue(':apptType', $apptType);
+$statement->execute();
+$statement->closeCursor();
+
+$query = 'INSERT INTO preferences (patientNumber, contactMethod, notes)
+         VALUES(:patient_id, :method, :notes);';
+$statement = $db->prepare($query);
+$statement->bindValue(':patient_id', $patient_id);
+$statement->bindValue(':method', $method);
+$statement->bindValue(':notes', $notes);
+$statement->execute();
+$statement->closeCursor();
+}
 
 $query = 'SELECT * FROM patient
          ORDER BY patientNumber';

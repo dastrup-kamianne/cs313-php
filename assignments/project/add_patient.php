@@ -19,7 +19,7 @@ include ('db_connect.php');
           <main>
               
               <form action="." method="post">
-                  <input type="hidden" name="action" value ="add_appt_db">
+                  <input type="hidden" name="action" value ="add_patient_db">
                   
                   <label>First Name:</label>
                   <input type="text" name="fname" ><br>

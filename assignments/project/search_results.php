@@ -129,6 +129,15 @@ $statement->closeCursor();}
                   <tr>  
                 <td><form action="." method="post">
                     <input type="hidden" name="action"
+                           value ="add_patient">
+                    
+                    <input type="submit" value="Add New Patient">
+                </form></td>
+                  </tr>
+                  
+                  <tr>  
+                <td><form action="." method="post">
+                    <input type="hidden" name="action"
                            value ="search_patients">
                     
                     <input type="submit" value="Search For Patients">
