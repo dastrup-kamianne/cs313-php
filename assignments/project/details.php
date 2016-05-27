@@ -76,6 +76,7 @@ $statement->closeCursor();
                       <th>City, State, Zip</th>
                       <th>Email</th>
                       <th>Phone Number</th>
+                      <th>&nbsp</th>
                   </tr>
                   
                   <tr>
@@ -85,30 +86,53 @@ $statement->closeCursor();
                       <td><?php echo $patient['city'] . ', ' . $patient['state'] . ' ' . $patient['zipCode'];?></td>
                       <td><?php echo $patient['email'];?></td>
                       <td><?php echo $patient['phone'];?></td>
+                      <td><form action="." method="post">
+                    <input type="hidden" name="action"
+                           value ="patient_edit">
+                    <input type="hidden" name="patientNumber"
+                           value="<?php echo $patient['patientNumber']; ?>">
+                    <input type="submit" value="Edit">
+                </form></td>
                   </tr>
-              </table>
+              </table><br>
               
               <table class="details">
                   <tr><th>Appt Date</th>
                       <th>Appt Type</th>
+                      <th>&nbsp</th>
                   </tr>
                   <?php foreach ($apptHistory as $appt) : ?>
                   <tr>
                       <td><?php echo $appt['apptDate'];?></td>
                       <td><?php echo $appt['apptType'];?></td>
+                      <td><form action="." method="post">
+                    <input type="hidden" name="action"
+                           value ="add_appt">
+                    <input type="hidden" name="patientNumber"
+                           value="<?php echo $patient['patientNumber']; ?>">
+                    <input type="submit" value="Add Appt">
+                </form></td>
                   </tr>
                   <?php endforeach; ?>
-              </table>
+              </table><br>
               
               <table class="details">
                   <tr><th>Contact Method</th>
                       <th>Notes</th>
+                      <th>&nbsp</th>
                   </tr>
                   <tr>
                       <td><?php echo $preferences['contactMethod'];?></td>
                       <td><?php echo $preferences['notes'];?></td>
+                      <td><form action="." method="post">
+                    <input type="hidden" name="action"
+                           value ="preference_edit">
+                    <input type="hidden" name="patientNumber"
+                           value="<?php echo $patient['patientNumber']; ?>">
+                    <input type="submit" value="Edit">
+                </form></td>
                   </tr>
-              </table>
+              </table><br>
 
                   
               <table id="links">

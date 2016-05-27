@@ -46,8 +46,34 @@ switch ($action){
         $zipcode = filter_input(INPUT_POST, 'zipcode',FILTER_VALIDATE_INT);
         $phone = filter_input(INPUT_POST, 'fname',FILTER_VALIDATE_INT);
         $email = filter_input(INPUT_POST, 'fname');
-        
-        
+        include('details.php');
+        break;
+    
+    case 'add_appt':
+        $patient_id = filter_input(INPUT_POST, 'patientNumber', 
+            FILTER_VALIDATE_INT);
+        include('add_appt_form.php');
+        break;
+    
+    case 'add_appt_db':
+        $id = filter_input(INPUT_POST, 'id', 
+            FILTER_VALIDATE_INT);
+        $apptDate = filter_input(INPUT_POST, 'apptDate');
+        $apptType = filter_input(INPUT_POST, 'apptType');
+        include('details.php');
+        break;
+    
+    case 'preference_edit':
+        $patient_id = filter_input(INPUT_POST, 'patientNumber', 
+            FILTER_VALIDATE_INT);
+        include('preference_edit.php');
+        break;
+    
+    case 'edit_pref_db':
+        $id = filter_input(INPUT_POST, 'id', 
+            FILTER_VALIDATE_INT);
+        $method = filter_input(INPUT_POST, 'method');
+        $notes = filter_input(INPUT_POST, 'notes');
         include('details.php');
         break;
     
