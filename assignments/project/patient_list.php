@@ -17,7 +17,7 @@ $statement->bindValue(':phone', $phone);
 $statement->execute();
 $statement->closeCursor();
 
-
+echo $fname . $lname . $phone;
 $query = 'SELECT patientNumber FROM patient
          WHERE fname = :fname
          AND lname = :lname
