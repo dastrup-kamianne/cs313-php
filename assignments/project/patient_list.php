@@ -29,7 +29,6 @@ $statement->bindValue(":phone", $phone);
 $statement->execute();
 $patient_id = $statement->fetch();
 $statement->closeCursor();
-return $patient_id;
 
 echo $patient_id . 'echo';
 print_r($patient_id);
