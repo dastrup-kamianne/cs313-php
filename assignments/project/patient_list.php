@@ -2,7 +2,9 @@
 include ('db_connect.php');
 
 if ($action == 'add_patient_db'){
-    $query = 'INSERT INTO patient (firstName, lastName, streetAddress, city, state, zipCode, email, phone)
+    
+    echo $fname . $lname . $apptDate . $method;
+/*    $query = 'INSERT INTO patient (firstName, lastName, streetAddress, city, state, zipCode, email, phone)
          VALUES( :fname, :lname, :address, :city, :state, :zip, :email, :phone);';
 $statement = $db->prepare($query);
 $statement->bindValue(':fname', $fname);
@@ -41,7 +43,7 @@ $statement->bindValue(':patient_id', $patient_id);
 $statement->bindValue(':method', $method);
 $statement->bindValue(':notes', $notes);
 $statement->execute();
-$statement->closeCursor();
+$statement->closeCursor();*/
 }
 
 $query = 'SELECT * FROM patient

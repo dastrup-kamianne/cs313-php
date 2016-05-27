@@ -34,7 +34,7 @@ include ('db_connect.php');
                   <input type="text" name="city"><br>
                   
                   <label>State:</label>
-                  <input type="text" name="state"><br>
+                  <input type="text" name="state" value="XX"><br>
                   
                   <label>Zip Code:</label>
                   <input type="text" name="zipcode"><br>
@@ -46,7 +46,7 @@ include ('db_connect.php');
                   <input type="text" name="email"><br>
                   
                   <label>Appointment Date:</label>
-                  <input type="text" name="apptDate" ><br>
+                  <input type="text" name="apptDate" value="YYYY-MM-DD"><br>
                   
                   <label>Appointment Type:</label>
                   <input type="text" name="apptType"><br>
@@ -55,7 +55,7 @@ include ('db_connect.php');
                   <input type="text" name="method" ><br>
                   
                   <label>Notes:</label>
-                  <input type="text" name="notes"><br>
+                  <textarea name="notes" rows="10" cols="50"></textarea><br>
                   
                   <input type="submit" value="Add Patient">
                   
