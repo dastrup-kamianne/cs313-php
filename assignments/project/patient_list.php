@@ -30,8 +30,7 @@ $statement->execute();
 $patient_id = $statement->fetch();
 $statement->closeCursor();
 
-echo $patient_id . 'echo';
-print_r($patient_id);
+echo $patient_id;
 /*
 $query = 'INSERT INTO apptHistory (patientNumber, apptDate, apptType)
          VALUES(:patient_id, :apptDate, :apptType);';
