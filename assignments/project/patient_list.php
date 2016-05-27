@@ -3,21 +3,21 @@ include ('db_connect.php');
 
 if ($action == 'add_patient_db'){
     
-    echo $fname . $lname . $apptDate . $method;
-/*    $query = 'INSERT INTO patient (firstName, lastName, streetAddress, city, state, zipCode, email, phone)
-         VALUES( :fname, :lname, :address, :city, :state, :zip, :email, :phone);';
+$query = 'INSERT INTO patient (firstName, lastName, streetAddress, city, state, zipCode, email, phone)
+         VALUES( :fname, :lname, :address, :city, :state, :zipcode, :email, :phone);';
 $statement = $db->prepare($query);
 $statement->bindValue(':fname', $fname);
 $statement->bindValue(':lname', $lname);
 $statement->bindValue(':address', $address);
 $statement->bindValue(':city', $city);
 $statement->bindValue(':state', $state);
-$statement->bindValue(':zip', $zip);
+$statement->bindValue(':zipcode', $zipcode);
 $statement->bindValue(':email', $email);
 $statement->bindValue(':phone', $phone);
 $statement->execute();
 $statement->closeCursor();
 
+/*
 $query = 'SELECT patientNumber FROM patient
          WHERE phone = :phone;';
 $statement = $db->prepare($query);
