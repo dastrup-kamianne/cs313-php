@@ -5,7 +5,6 @@ $patient_id = filter_input(INPUT_POST, 'patientNumber',
             FILTER_VALIDATE_INT);
 
 if ($action == "edit_patient_db"){
-    echo $fname . $lname . $address . $city . $state . $zipcode . $phone . $email . $patient_id;
     $query = 'UPDATE patient
              SET firstName = :fname
              , lastName = :lname
