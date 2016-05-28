@@ -1,6 +1,9 @@
 <?php
 include ('db_connect.php');
 
+$patient_id = filter_input(INPUT_POST, 'patientNumber', 
+            FILTER_VALIDATE_INT);
+
 if ($action == "edit_patient_db"){
     $query = 'UPDATE patient
              SET firstName = :fname
@@ -8,10 +11,10 @@ if ($action == "edit_patient_db"){
              , address = :streetAddress
              , city = :city
              , state = :state
-             , zipcode = :zipCode
+             , zipCode = :zipCode
              , phone = :phone
              , email = :email
-             WHERE patientNumber = :id';
+             WHERE patientNumber = :patient_id';
     $statement = $db->prepare($query);
     $statement->bindValue(':fname', $fname);
     $statement->bindValue(':lname', $lname);
@@ -25,9 +28,6 @@ if ($action == "edit_patient_db"){
     $statement->execute();
     $statement->closeCursor();
 }
-
-$patient_id = filter_input(INPUT_POST, 'patientNumber', 
-            FILTER_VALIDATE_INT);
 
 $query = 'SELECT * FROM patient
          WHERE patientNumber = :patient_id';

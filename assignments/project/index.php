@@ -36,7 +36,7 @@ switch ($action){
         break;
     
     case 'edit_patient_db':
-        $id = filter_input(INPUT_POST, 'id', 
+        $patient_id = filter_input(INPUT_POST, 'patientNumber', 
             FILTER_VALIDATE_INT);
         $fname = filter_input(INPUT_POST, 'fname');
         $lname = filter_input(INPUT_POST, 'lname');
@@ -47,7 +47,6 @@ switch ($action){
         $phone = filter_input(INPUT_POST, 'phone',FILTER_VALIDATE_INT);
         $email = filter_input(INPUT_POST, 'email');
         
-        echo $fname . $lname . $address . $city . $state . $zipcode . $phone . $email;
         include('details.php');
         break;
     

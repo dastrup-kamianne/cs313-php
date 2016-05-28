@@ -48,7 +48,7 @@ $statement->closeCursor();
               <form action="." method="post">
                   <input type="hidden" name="action" value ="edit_patient_db">
                   
-                  <input type="hidden" name="id" value ="<?php echo $patient['patientNumber'];?>">
+                  <input type="hidden" name="patientNumber" value ="<?php echo $patient['patientNumber'];?>">
                   
                   <label>First Name:</label>
                   <input type="text" name="fname" value="<?php echo $patient['firstName'];?>"><br>
