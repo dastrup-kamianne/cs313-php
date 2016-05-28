@@ -25,7 +25,7 @@ if ($action == "edit_patient_db"){
     $statement->bindValue(':zipcode', $zipcode);
     $statement->bindValue(':phone', $phone);
     $statement->bindValue(':email', $email);
-    $statement->bindValue(':id', $id);
+    $statement->bindValue(':patient_id', $patient_id);
     $statement->execute();
     $statement->closeCursor();
 }
