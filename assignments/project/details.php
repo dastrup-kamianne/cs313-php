@@ -29,6 +29,17 @@ if ($action == "edit_patient_db"){
     $statement->closeCursor();
 }
 
+if ($action == "add_appt_db"){
+$query = 'INSERT INTO apptHistory (patientNumber, apptDate, apptType)
+         VALUES(:id, :apptDate, :apptType);';
+$statement = $db->prepare($query);
+$statement->bindValue(':id', $id);
+$statement->bindValue(':apptDate', $apptDate);
+$statement->bindValue(':apptType', $apptType);
+$statement->execute();
+$statement->closeCursor();
+}
+
 $query = 'SELECT * FROM patient
          WHERE patientNumber = :patient_id';
 $statement = $db->prepare($query);
