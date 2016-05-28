@@ -30,12 +30,8 @@ $patient_id = $statement->fetch();
 $statement->closeCursor();
 
 $patient_id = $patient_id[0];
-echo $patient_id . 'echo';
-print_r($patient_id);
 
-//fix array being returned into variable
 
-/*
 $query = 'INSERT INTO apptHistory (patientNumber, apptDate, apptType)
          VALUES(:patient_id, :apptDate, :apptType);';
 $statement = $db->prepare($query);
@@ -52,7 +48,7 @@ $statement->bindValue(':patient_id', $patient_id);
 $statement->bindValue(':method', $method);
 $statement->bindValue(':notes', $notes);
 $statement->execute();
-$statement->closeCursor();*/
+$statement->closeCursor();
 }
 
 $query = 'SELECT * FROM patient
