@@ -44,8 +44,8 @@ switch ($action){
         $city = filter_input(INPUT_POST, 'city');
         $state = filter_input(INPUT_POST, 'state');
         $zipcode = filter_input(INPUT_POST, 'zipcode',FILTER_VALIDATE_INT);
-        $phone = filter_input(INPUT_POST, 'fname',FILTER_VALIDATE_INT);
-        $email = filter_input(INPUT_POST, 'fname');
+        $phone = filter_input(INPUT_POST, 'phone',FILTER_VALIDATE_INT);
+        $email = filter_input(INPUT_POST, 'email');
         include('details.php');
         break;
     
