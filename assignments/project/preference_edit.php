@@ -32,13 +32,13 @@ $statement->closeCursor();
               <form action="." method="post">
                   <input type="hidden" name="action" value ="edit_pref_db">
                   
-                  <input type="hidden" name="id" value ="<?php echo $preferences['patientNumber'];?>">
+                  <input type="hidden" name="patientNumber" value ="<?php echo $preferences['patientNumber'];?>">
                   
                   <label>Contact Method:</label>
                   <input type="text" name="method" value="<?php echo $preferences['contactMethod'];?>"><br>
                   
                   <label>Notes:</label>
-                  <textarea name="notes"><?php echo $preferences['notes'];?></textarea><br>
+                  <textarea name="notes" rows="10" cols="50"><?php echo $preferences['notes'];?></textarea><br>
                   
                   <input type="submit" value="Make Changes">
                   

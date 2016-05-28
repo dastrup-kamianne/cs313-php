@@ -40,6 +40,20 @@ $statement->execute();
 $statement->closeCursor();
 }
 
+if ($action == "edit_pref_db"){
+    $query = 'UPDATE preferences
+             SET patientNumber = :patient_id
+             , contactMethod = :method
+             , notes = :notes
+             WHERE patientNumber = :patient_id';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':patient_id', $patient_id);
+    $statement->bindValue(':method', $method);
+    $statement->bindValue(':notes', $notes);
+    $statement->execute();
+    $statement->closeCursor();
+}
+
 $query = 'SELECT * FROM patient
          WHERE patientNumber = :patient_id';
 $statement = $db->prepare($query);

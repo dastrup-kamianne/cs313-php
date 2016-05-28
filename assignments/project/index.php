@@ -91,7 +91,7 @@ switch ($action){
         break;
     
     case 'edit_pref_db':
-        $id = filter_input(INPUT_POST, 'id', 
+        $patient_id = filter_input(INPUT_POST, 'patientNumber', 
             FILTER_VALIDATE_INT);
         $method = filter_input(INPUT_POST, 'method');
         $notes = filter_input(INPUT_POST, 'notes');
