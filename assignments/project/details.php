@@ -31,9 +31,9 @@ if ($action == "edit_patient_db"){
 
 if ($action == "add_appt_db"){
 $query = 'INSERT INTO apptHistory (patientNumber, apptDate, apptType)
-         VALUES(:id, :apptDate, :apptType);';
+         VALUES(:patient_id, :apptDate, :apptType);';
 $statement = $db->prepare($query);
-$statement->bindValue(':id', $id);
+$statement->bindValue(':patient_id', $patient_id);
 $statement->bindValue(':apptDate', $apptDate);
 $statement->bindValue(':apptType', $apptType);
 $statement->execute();

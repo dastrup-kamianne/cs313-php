@@ -23,7 +23,7 @@ $patient_id = filter_input(INPUT_POST, 'patientNumber',
               <form action="." method="post">
                   <input type="hidden" name="action" value ="add_appt_db">
                   
-                  <input type="hidden" name="id" value ="<?php echo $patient_id;?>">
+                  <input type="hidden" name="patientNumber" value ="<?php echo $patient_id;?>">
                   
                   <label>Appointment Date:</label>
                   <input type="text" name="apptDate" ><br>
