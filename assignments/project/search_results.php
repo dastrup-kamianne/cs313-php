@@ -52,7 +52,7 @@ $statement->closeCursor();}
 
 elseif ($date == '1year'){
 $query = 'SELECT * FROM apptHistory
-         WHERE apptDate >= DATE_ADD(CURDATE(), INTERVAL -365 DAY)';
+         WHERE apptDate <= DATE_ADD(CURDATE(), INTERVAL -365 DAY)';
 $statement = $db->prepare($query);
 $statement->bindValue(":date", $date);
 $statement->execute();
