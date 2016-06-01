@@ -2,6 +2,7 @@
 require 'password.php';
 require 'connect_db2.php';
 
+session_start();
 if ((isset($_POST['username'])) && (isset($_POST['password']))){
 
 
