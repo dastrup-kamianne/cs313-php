@@ -2,11 +2,24 @@
 require 'password.php';
 require 'connect_db2.php';
 
+session_start();
 if (isset ($_POST['user']) && isset($_POST['pass'])){
 $user = filter_input(INPUT_POST, 'user');
 $pass = filter_input(INPUT_POST, 'pass');
 
+$query = 'SELECT password FROM users
+         WHERE username = :user;';
+$statement = $db->prepare($query);
+$statement->bindValue(":user", $user);
+$statement->execute();
+$password = $statement->fetch();
+$passwordHash = $password['password'];
+$statement->closeCursor();
+
+
+
 if (password_verify($pass, $passwordHash)){
+    $_SESSION['username'] = $user;
     header('Location:homepage.php');
 }
 else{
