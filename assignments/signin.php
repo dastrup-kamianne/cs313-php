@@ -1,5 +1,6 @@
 <?php
 require 'password.php';
+require 'connect_db2.php';
 
 if (isset ($_POST['user']) && isset($_POST['pass'])){
 $user = filter_input(INPUT_POST, 'user');

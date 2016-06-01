@@ -1,5 +1,5 @@
 <?php
-
+require 'connect_db2.php';
 
 
 session_start();
