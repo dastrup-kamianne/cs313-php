@@ -17,9 +17,11 @@ $statement->bindValue(':passwordHash', $passwordHash);
 $statement->execute();
 $statement->closeCursor();
 
+$_SESSION['username'] = $username;
+
 header('Location:homepage.php');
 die();
-$_SESSION['username'] = $username;
+
 
 }
 
