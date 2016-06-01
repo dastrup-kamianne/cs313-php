@@ -1,7 +1,7 @@
 <?php
 require 'password.php';
 
-if (isset ($_POST['username']) && isset($_POST['password'])){
+if ((isset($_POST['username'])) && (isset($_POST['password']))){
 
 
 $username = filter_input(INPUT_POST, 'username');
