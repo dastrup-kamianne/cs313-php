@@ -1,7 +1,8 @@
 <?php
+require 'password.php';
 
 if (isset ($_POST['username']) && isset($_POST['password'])){
-require 'password.php';
+
 
 $username = filter_input(INPUT_POST, 'username');
 $password = filter_input(INPUT_POST, 'password');
