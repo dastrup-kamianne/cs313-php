@@ -26,7 +26,7 @@ $patient_id = filter_input(INPUT_POST, 'patientNumber',
                   <input type="hidden" name="patientNumber" value ="<?php echo $patient_id;?>">
                   
                   <label>Appointment Date:</label>
-                  <input type="text" name="apptDate" ><br>
+                  <input type="text" name="apptDate" placeholder="YYYY-MM-DD"><br>
                   
                   <label>Appointment Type:</label>
                   <input type="text" name="apptType"><br>

@@ -34,13 +34,13 @@ include ('db_connect.php');
                   <input type="text" name="city"><br>
                   
                   <label>State:</label>
-                  <input type="text" name="state" value="XX"><br>
+                  <input type="text" name="state" placeholder="XX"><br>
                   
                   <label>Zip Code:</label>
                   <input type="text" name="zipcode"><br>
                   
                   <label>Phone:</label>
-                  <input type="text" name="phone"><br>
+                  <input type="text" name="phone" placeholder="XXXXXXXXX"><br>
                   
                   <label>Email:</label>
                   <input type="text" name="email"><br>
