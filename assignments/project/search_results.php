@@ -36,7 +36,7 @@ $query = 'SELECT patient.firstName, patient.lastName, apptHistory.apptDate, appt
     FROM patient
     INNER JOIN apptHistory 
     ON patient.patientNumber = apptHistory.patientNumber
-    WHERE apptHistory.apptDate <= DATE_ADD( CURDATE( ) , INTERVAL -90DAY );';
+    WHERE apptHistory.apptDate <= DATE_ADD(CURDATE(), INTERVAL -90 DAY )';
 $statement = $db->prepare($query);
 $statement->bindValue(":date", $date);
 $statement->execute();
