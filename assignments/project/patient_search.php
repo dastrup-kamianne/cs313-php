@@ -16,7 +16,7 @@
      </header>
           
           <main>
-              <form action="index.php" method="post" class="search_form">
+              <form action="index.php" method="post" class="search_form" id="aligned">
                   <input type="hidden" name="action" value="searchlname">
                   
                   <label>Search by last name:</label>

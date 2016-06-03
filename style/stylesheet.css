@@ -288,6 +288,34 @@ main li a:hover{
     height: 200px;
     
 }
+
+input[type=button]{
+    background-color: #7c1e76;
+    border: 2px solid #f9b72b;
+    borderradius: 4px;
+}
+
+#aligned {
+    margin: .5em 0 2em;
+}
+#aligned label {
+    width: 8em;
+    margin-top: .2em;
+    margin-right: 1em;
+    margin-bottom: .5em;
+    float: left;
+}
+#aligned input {
+    float: left;
+}
+#aligned input[text] {
+    width: 15em;
+}
+#aligned .message {
+    margin-left: .5em;
+    width: 15em;
+}
+
 /*Import for mobile phones*/
 @media only screen and (max-device-width: 767px) and (orientation: portrait),
 only screen and (max-device-width: 1023px) and (orientation: landscape){

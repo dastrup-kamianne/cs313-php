@@ -18,7 +18,7 @@ include ('db_connect.php');
           
           <main>
               
-              <form action="." method="post">
+              <form action="." method="post" id="aligned">
                   <input type="hidden" name="action" value ="add_patient_db">
                   
                   <label>First Name:</label>

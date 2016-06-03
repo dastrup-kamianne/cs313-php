@@ -29,7 +29,7 @@ $statement->closeCursor();
           
           <main>
               
-              <form action="." method="post">
+              <form action="." method="post" id="aligned">
                   <input type="hidden" name="action" value ="edit_pref_db">
                   
                   <input type="hidden" name="patientNumber" value ="<?php echo $preferences['patientNumber'];?>">
