@@ -296,6 +296,8 @@ input[type=button], [type=submit]{
     border-radius: 4px;
     color: white;
     padding: 3px;
+    clear: left;
+   
 }
 
 #aligned {
