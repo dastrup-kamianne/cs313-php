@@ -118,8 +118,8 @@ $statement->closeCursor();}
               <table class="resultlist">
                   <?php foreach ($patientd as $date) : ?>
                   <tr>
-                      <td>First Name: <?php echo $date['firstName'];?></td>
-                      <td>Last Name: <?php echo $date['lastName'];?></td>
+                      <td>Name: <?php echo $date['firstName'];?></td>
+                      <td><?php echo $date['lastName'];?></td>
                       <td>Date: <?php echo $date['apptDate'];?></td>
                       <td>Type: <?php echo $date['apptType'];?></td>
                   </tr>
