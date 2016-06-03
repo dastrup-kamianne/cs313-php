@@ -306,7 +306,7 @@ input[type=button], [type=submit]{
     margin-top: .2em;
     margin-right: 1em;
     margin-bottom: .5em;
-    float: left;
+    //float: left;
 }
 #aligned input {
     float: left;
@@ -314,10 +314,7 @@ input[type=button], [type=submit]{
 #aligned input[text] {
     width: 16em;
 }
-#aligned .message {
-    margin-left: .5em;
-    width: 15em;
-}
+
 
 /*Import for mobile phones*/
 @media only screen and (max-device-width: 767px) and (orientation: portrait),
