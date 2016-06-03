@@ -281,15 +281,12 @@ main li a:hover{
     border-bottom: 1px solid #f9b72b;
     padding: 10px;
 }
-
-button{
-    background-color: #7c1e76;
-    color: white;
-    border: 2px solid #f9b72b;
-    border-radius: 4px;
-}
-button:hover{
-    background-color: #67c1c1;
+#dental_logo{
+    display: box;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    
 }
 /*Import for mobile phones*/
 @media only screen and (max-device-width: 767px) and (orientation: portrait),
