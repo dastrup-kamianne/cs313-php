@@ -291,14 +291,14 @@ main li a:hover{
 
 input[type=button], [type=submit]{
     background-color: #7c1e76;
-    border: 2px solid #f9b72b;
+    border: 1px solid #f9b72b;
     border-radius: 4px;
     color: white;
-    padding: 2px;
+    padding: 3px;
 }
 
 #aligned {
-    margin: .5em 0 2em;
+    margin: 100px 5px 10px ;
 }
 #aligned label {
     display: block;
@@ -309,7 +309,7 @@ input[type=button], [type=submit]{
     //float: left;
 }
 #aligned input {
-    display: inline-block;
+    
     float: left;
 }
 #aligned input[text] {
