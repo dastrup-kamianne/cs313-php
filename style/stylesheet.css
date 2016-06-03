@@ -289,17 +289,17 @@ main li a:hover{
     
 }
 
-input[type=button]{
+input[type=button], [type=submit]{
     background-color: #7c1e76;
     border: 2px solid #f9b72b;
-    borderradius: 4px;
+    border-radius: 4px;
 }
 
 #aligned {
     margin: .5em 0 2em;
 }
 #aligned label {
-    width: 8em;
+    width: 15em;
     margin-top: .2em;
     margin-right: 1em;
     margin-bottom: .5em;
