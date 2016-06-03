@@ -299,12 +299,12 @@ input[type=button], [type=submit]{
     clear: left;
    
 }
-#formbutton{
+.formbutton{
     background-color: #67c1c1;
     padding: 5px;
     font-size: 12px;    
 }
-#searchbutton{
+.searchbutton{
     background-color: #67c1c1;
     padding: 5px;
     font-size: 12px;
