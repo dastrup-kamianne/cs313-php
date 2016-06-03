@@ -314,6 +314,9 @@ input[type=button], [type=submit]{
     
     float: left;
 }
+#aligned textarea{
+    float: left;
+}
 #aligned input[text] {
     width: 16em;
 }
