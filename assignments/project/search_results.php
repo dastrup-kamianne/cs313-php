@@ -32,11 +32,11 @@ $statement->execute();
 $patientd = $statement->fetchAll();
 $statement->closeCursor();*/
 
-$query = 'SELECT patientNumber, firstName, lastName 
-            FROM patient AS p
-            JOIN (SELECT * FROM apptHistory
-         WHERE apptDate <= DATE_ADD(CURDATE(), INTERVAL -90 DAY) AS ah)
-            ON p.patientNumber = ah.patientNumber;';
+$query = 'SELECT patient.firstName, patient.lastName, apptHistory.apptDate, apptHistory.apptType
+    FROM patient
+    INNER JOIN apptHistory 
+    ON patient.patientNumber = apptHistory.patientNumber
+    WHERE apptHistory.apptDate <= DATE_ADD( CURDATE( ) , INTERVAL -90DAY );';
 $statement = $db->prepare($query);
 $statement->bindValue(":date", $date);
 $statement->execute();
