@@ -16,7 +16,7 @@
          <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/main-header.php'; ?>
          <h1>Dental Patient List</h1>
      </header>
-          
+          <img src="logo.png" id="dental_logo">
           <main>
               <table id="links">
                   <tr>  
