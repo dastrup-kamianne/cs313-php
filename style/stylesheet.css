@@ -303,13 +303,16 @@ input[type=button], [type=submit]{
 .formbutton{
     background-color: #67c1c1;
     padding: 5px;
-    font-size: 12px;    
+    font-size: 12px; 
+    float: left;
+    
 }
 .searchbutton{
     background-color: #67c1c1;
     padding: 5px;
     font-size: 12px;
     clear: none;
+    float: left;
 }
 
 #aligned {
