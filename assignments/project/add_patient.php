@@ -46,7 +46,7 @@ include ('db_connect.php');
                   <input type="text" name="email"><br>
                   
                   <label>Appointment Date:</label>
-                  <input type="text" name="apptDate" value="YYYY-MM-DD"><br>
+                  <input type="text" name="apptDate" placeholder="YYYY-MM-DD"><br>
                   
                   <label>Appointment Type:</label>
                   <input type="text" name="apptType"><br>
