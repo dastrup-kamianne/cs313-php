@@ -24,14 +24,6 @@ $statement->closeCursor();
 }
 
 if ($date == '3months'){
-/*$query = 'SELECT * FROM apptHistory
-         WHERE apptDate <= DATE_ADD(CURDATE(), INTERVAL -90 DAY)';
-$statement = $db->prepare($query);
-$statement->bindValue(":date", $date);
-$statement->execute();
-$patientd = $statement->fetchAll();
-$statement->closeCursor();*/
-
 $query = 'SELECT patient.firstName, patient.lastName, apptHistory.apptDate, apptHistory.apptType
     FROM patient
     INNER JOIN apptHistory 
@@ -44,7 +36,10 @@ $patientd = $statement->fetchAll();
 $statement->closeCursor();
 }
 elseif ($date == '6months'){
-$query = 'SELECT * FROM apptHistory
+$query = 'SELECT patient.firstName, patient.lastName, apptHistory.apptDate, apptHistory.apptType
+    FROM patient
+    INNER JOIN apptHistory 
+    ON patient.patientNumber = apptHistory.patientNumber
          WHERE apptDate <= DATE_ADD(CURDATE(), INTERVAL -180 DAY)';
 $statement = $db->prepare($query);
 $statement->bindValue(":date", $date);
@@ -53,7 +48,10 @@ $patientd = $statement->fetchAll();
 $statement->closeCursor();}
 
 elseif ($date == '9months'){
-$query = 'SELECT * FROM apptHistory
+$query = 'SELECT patient.firstName, patient.lastName, apptHistory.apptDate, apptHistory.apptType
+    FROM patient
+    INNER JOIN apptHistory 
+    ON patient.patientNumber = apptHistory.patientNumber
          WHERE apptDate <= DATE_ADD(CURDATE(), INTERVAL -270 DAY)';
 $statement = $db->prepare($query);
 $statement->bindValue(":date", $date);
@@ -62,7 +60,10 @@ $patientd = $statement->fetchAll();
 $statement->closeCursor();}
 
 elseif ($date == '1year'){
-$query = 'SELECT * FROM apptHistory
+$query = 'SELECT patient.firstName, patient.lastName, apptHistory.apptDate, apptHistory.apptType
+    FROM patient
+    INNER JOIN apptHistory 
+    ON patient.patientNumber = apptHistory.patientNumber
          WHERE apptDate <= DATE_ADD(CURDATE(), INTERVAL -365 DAY)';
 $statement = $db->prepare($query);
 $statement->bindValue(":date", $date);
@@ -117,7 +118,8 @@ $statement->closeCursor();}
               <table class="resultlist">
                   <?php foreach ($patientd as $date) : ?>
                   <tr>
-                      <td>Patient ID: <?php echo $date['patientNumber'];?></td>
+                      <td>First Name: <?php echo $date['firstName'];?></td>
+                      <td>Last Name: <?php echo $date['lastName'];?></td>
                       <td>Date: <?php echo $date['apptDate'];?></td>
                       <td>Type: <?php echo $date['apptType'];?></td>
                   </tr>
