@@ -301,7 +301,7 @@ input[type=button], [type=submit]{
     margin: .5em 0 2em;
 }
 #aligned label {
-    //display: block;
+    display: block;
     width: 10em;
     margin-top: .2em;
     margin-right: 1em;
@@ -309,6 +309,7 @@ input[type=button], [type=submit]{
     //float: left;
 }
 #aligned input {
+    display: inline-block;
     float: left;
 }
 #aligned input[text] {
