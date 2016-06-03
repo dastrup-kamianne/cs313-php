@@ -15,7 +15,7 @@ $patient_id = filter_input(INPUT_POST, 'patientNumber',
       <div class="wrapper">
      <header>
          <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/main-header.php'; ?>
-         <h1>Edit Patient</h1>
+         <h1>Add Appointment</h1>
      </header>
           
           <main>
@@ -31,7 +31,8 @@ $patient_id = filter_input(INPUT_POST, 'patientNumber',
                   <label>Appointment Type:</label>
                   <input type="text" name="apptType"><br>
                   
-                  <input type="submit" value="Add Appointment">
+                  <label></label>
+                  <input type="submit" value="Add Appointment" class="formbutton">
                   
               </form>
               

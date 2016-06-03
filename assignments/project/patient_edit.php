@@ -74,7 +74,8 @@ $statement->closeCursor();
                   <label>Email:</label>
                   <input type="text" name="email" value="<?php echo $patient['email'];?>"><br>
                   
-                  <input type="submit" value="Make Changes">
+                  <label></label>
+                  <input type="submit" value="Make Changes" class="formbutton">
                   
               </form>
               

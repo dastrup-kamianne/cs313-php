@@ -89,7 +89,7 @@ $statement->closeCursor();
       <div class="wrapper">
      <header>
          <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/main-header.php'; ?>
-         <h1>Dental Patient List</h1>
+         <h1>Patient Details</h1>
      </header>
           
           <main>

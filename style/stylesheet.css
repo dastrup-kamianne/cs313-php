@@ -299,6 +299,17 @@ input[type=button], [type=submit]{
     clear: left;
    
 }
+#formbutton{
+    background-color: #67c1c1;
+    padding: 5px;
+    font-size: 12px;    
+}
+#searchbutton{
+    background-color: #67c1c1;
+    padding: 5px;
+    font-size: 12px;
+    clear: none;
+}
 
 #aligned {
     margin: 5px 10px 5px 100px ;
@@ -322,6 +333,7 @@ input[type=button], [type=submit]{
 #aligned input[text] {
     width: 16em;
 }
+
 
 
 /*Import for mobile phones*/

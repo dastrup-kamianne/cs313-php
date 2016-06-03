@@ -24,7 +24,7 @@ $statement->closeCursor();
       <div class="wrapper">
      <header>
          <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/main-header.php'; ?>
-         <h1>Edit Patient</h1>
+         <h1>Edit Patient Preference</h1>
      </header>
           
           <main>
@@ -40,7 +40,8 @@ $statement->closeCursor();
                   <label>Notes:</label>
                   <textarea name="notes" rows="10" cols="50"><?php echo $preferences['notes'];?></textarea><br>
                   
-                  <input type="submit" value="Make Changes">
+                  <label></label>
+                  <input type="submit" value="Make Changes" class="formbutton">
                   
               </form>
               

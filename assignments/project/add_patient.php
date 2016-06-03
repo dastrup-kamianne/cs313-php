@@ -13,7 +13,7 @@ include ('db_connect.php');
       <div class="wrapper">
      <header>
          <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/main-header.php'; ?>
-         <h1>Edit Patient</h1>
+         <h1>Add New Patient</h1>
      </header>
           
           <main>
@@ -57,7 +57,8 @@ include ('db_connect.php');
                   <label>Notes:</label>
                   <textarea name="notes" rows="10" cols="50"></textarea><br>
                   
-                  <input type="submit" value="Add Patient">
+                  <label></label>
+                  <input type="submit" value="Add" class="formbutton">
                   
               </form>
               

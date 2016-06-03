@@ -12,7 +12,7 @@
       <div class="wrapper">
      <header>
          <?php include $_SERVER['DOCUMENT_ROOT'].'/modules/main-header.php'; ?>
-         <h1>Dental Patient List</h1>
+         <h1>Dental Patient Search</h1>
      </header>
           
           <main>
@@ -21,19 +21,19 @@
                   
                   <label>Search by last name:</label>
                   <input type ="text" name="lname">
-                  <input type="submit" Value="Search"><br>
+                  <input type="submit" Value="Search" class="searchbutton"><br>
               </form>
                   
                   
-              <form action="index.php" method="post" class="search_form">
+              <form action="index.php" method="post" class="search_form" id="aligned">
                   <input type="hidden" name="action" value="searchfname">
                   <label>Search by first name:</label>
                   <input type ="text" name="fname">
-                  <input type="submit" Value="Search"><br>
+                  <input type="submit" Value="Search" class="searchbutton"><br>
               </form>
                   
                   
-              <form action="index.php" method="post" class="search_form">
+              <form action="index.php" method="post" class="search_form" id="aligned">
                   <input type="hidden" name="action" value="searchdate">
                   <label>Search by date:</label>
                   <select name="date">
@@ -44,7 +44,7 @@
                       <option value="1year">1+ Year</option>
                   </select>
                   
-                  <input type="submit" Value="Search"><br>
+                  <input type="submit" Value="Search" class="searchbutton"><br>
               </form>
               
                   
