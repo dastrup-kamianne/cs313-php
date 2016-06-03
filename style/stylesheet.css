@@ -293,13 +293,16 @@ input[type=button], [type=submit]{
     background-color: #7c1e76;
     border: 2px solid #f9b72b;
     border-radius: 4px;
+    color: white;
+    padding: 2px;
 }
 
 #aligned {
     margin: .5em 0 2em;
 }
 #aligned label {
-    width: 15em;
+    display: block;
+    width: 10em;
     margin-top: .2em;
     margin-right: 1em;
     margin-bottom: .5em;
@@ -309,7 +312,7 @@ input[type=button], [type=submit]{
     float: left;
 }
 #aligned input[text] {
-    width: 15em;
+    width: 16em;
 }
 #aligned .message {
     margin-left: .5em;
