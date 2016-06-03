@@ -57,7 +57,7 @@ include ('db_connect.php');
                   <label>Notes:</label>
                   <textarea name="notes" rows="10" cols="50"></textarea><br>
                   
-                  <label></label>
+                  <label>&nbsp;</label>
                   <input type="submit" value="Add" class="formbutton">
                   
               </form>
