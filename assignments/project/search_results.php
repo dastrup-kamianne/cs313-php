@@ -24,14 +24,25 @@ $statement->closeCursor();
 }
 
 if ($date == '3months'){
-$query = 'SELECT * FROM apptHistory
+/*$query = 'SELECT * FROM apptHistory
          WHERE apptDate <= DATE_ADD(CURDATE(), INTERVAL -90 DAY)';
 $statement = $db->prepare($query);
 $statement->bindValue(":date", $date);
 $statement->execute();
 $patientd = $statement->fetchAll();
-$statement->closeCursor();}
+$statement->closeCursor();*/
 
+$query = 'SELECT patientNumber, firstName, lastName 
+            FROM patient AS p
+            JOIN (SELECT * FROM apptHistory
+         WHERE apptDate <= DATE_ADD(CURDATE(), INTERVAL -90 DAY) AS ah)
+            ON p.patientNumber = ah.patientNumber;';
+$statement = $db->prepare($query);
+$statement->bindValue(":date", $date);
+$statement->execute();
+$patientd = $statement->fetchAll();
+$statement->closeCursor();
+}
 elseif ($date == '6months'){
 $query = 'SELECT * FROM apptHistory
          WHERE apptDate <= DATE_ADD(CURDATE(), INTERVAL -180 DAY)';
