@@ -298,11 +298,11 @@ input[type=button], [type=submit]{
 }
 
 #aligned {
-    margin: 100px 5px 10px ;
+    margin: 5px 10px 5px 100px ;
 }
 #aligned label {
     display: block;
-    width: 10em;
+    width: 11em;
     margin-top: .2em;
     margin-right: 1em;
     margin-bottom: .5em;
